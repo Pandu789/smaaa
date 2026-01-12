@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tim Robotik SMA Masa Depan Raih Juara Nasional - Blog</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+    
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        chassis: '#e0e5ec',
+                        panel: '#f0f2f5',
+                        recessed: '#d1d9e6',
+                        ink: { DEFAULT: '#2d3436', muted: '#4a5568' },
+                        safety: { orange: '#ff4757', green: '#00ff41', yellow: '#fbbf24' }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        mono: ['JetBrains Mono', 'monospace'],
+                    },
+                    boxShadow: {
+                        'card': '8px 8px 16px #babecc, -8px -8px 16px #ffffff',
+                        'pressed': 'inset 6px 6px 12px #babecc, inset -6px -6px 12px #ffffff',
+                        'recessed': 'inset 4px 4px 8px #babecc, inset -4px -4px 8px #ffffff',
+                    },
+                    backgroundImage: {
+                        'scanlines': 'linear-gradient(rgba(18,16,16,0) 50%, rgba(0,0,0,0.25) 50%)',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body { background-color: #e0e5ec; color: #2d3436; scroll-behavior: smooth; }
+        .noise-overlay {
+            position: fixed; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; z-index: 50; opacity: 0.4;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+            mix-blend-mode: overlay;
+        }
+        
+        /* Typography Content */
+        .content-body p { margin-bottom: 1.5rem; line-height: 1.8; font-size: 1.05rem; }
+        .content-body h2 { font-family: 'Inter', sans-serif; font-weight: 800; font-size: 1.8rem; margin-top: 3rem; margin-bottom: 1rem; color: #2d3436; text-transform: uppercase; border-left: 5px solid #ff4757; padding-left: 1rem; }
+        .content-body h3 { font-family: 'Inter', sans-serif; font-weight: 700; font-size: 1.4rem; margin-top: 2rem; margin-bottom: 1rem; color: #4a5568; }
+        
+        /* Blockquote Style */
+        .content-body blockquote {
+            position: relative;
+            background: #d1d9e6;
+            padding: 2rem;
+            margin: 2rem 0;
+            border-radius: 8px;
+            box-shadow: inset 4px 4px 8px #babecc, inset -4px -4px 8px #ffffff;
+            font-family: 'JetBrains Mono', monospace;
+            font-style: italic;
+            border-left: 4px solid #ff4757;
+        }
+        .content-body blockquote::before {
+            content: '"';
+            font-size: 4rem;
+            position: absolute;
+            top: -10px;
+            left: 10px;
+            opacity: 0.2;
+            font-family: serif;
+        }
+
+        /* TOC Animation */
+        #toc-body { transition: max-height 0.3s ease-out, opacity 0.3s ease-out; overflow: hidden; }
+        .toc-collapsed { max-height: 0; opacity: 0; }
+        .toc-expanded { max-height: 500px; opacity: 1; }
+
+        /* FAQ Accordion */
+        .faq-content { max-height: 0; overflow: hidden; transition: max-height 0.3s ease-out; }
+        .faq-open .faq-content { max-height: 300px; }
+        .faq-open .faq-icon { transform: rotate(180deg); }
+    </style>
+</head>
+<body class="antialiased overflow-x-hidden selection:bg-safety-orange selection:text-white">
+
+    <div class="noise-overlay"></div>
+
+    <nav class="fixed top-0 w-full z-50 bg-[#e0e5ec]/90 backdrop-blur-md border-b border-white/20 shadow-[0_4px_6px_-1px_rgba(0,0,0,0.1),0_2px_4px_-1px_rgba(0,0,0,0.06)] transition-all duration-300" id="mainNavbar">
+    
+    <div class="hidden lg:flex justify-between items-center px-6 py-1 bg-[#2d3436] text-[10px] font-mono text-gray-400 border-b border-white/5">
+        <div class="flex gap-4">
+            <span><i data-lucide="phone" class="w-3 h-3 inline mr-1"></i> +62 341 123456</span>
+            <span><i data-lucide="mail" class="w-3 h-3 inline mr-1"></i> info@smateknologi.sch.id</span>
+        </div>
+        <div class="flex items-center gap-2">
+            <span class="w-2 h-2 rounded-full bg-[#00ff41] animate-pulse"></span>
+            SYSTEM STATUS: ONLINE
+        </div>
+    </div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center h-20">
+            
+            <a href="index.html" class="flex items-center gap-3 group">
+                <div class="w-10 h-10 rounded-lg bg-[#e0e5ec] shadow-[4px_4px_8px_#babecc,-4px_-4px_8px_#ffffff] flex items-center justify-center border border-white/50 group-hover:scale-105 transition-transform active:shadow-[inset_4px_4px_8px_#babecc,inset_-4px_-4px_8px_#ffffff]">
+                    <i data-lucide="cpu" class="text-[#2d3436] w-6 h-6 group-hover:text-[#ff4757] transition-colors"></i>
+                </div>
+                <div class="flex flex-col">
+                    <span class="font-sans font-black text-xl text-[#2d3436] leading-none tracking-tight" style="text-shadow: 0 1px 0 #fff;">SMA MASA DEPAN</span>
+                    <span class="font-mono text-[9px] tracking-[0.2em] text-[#ff4757] uppercase font-bold mt-1">INDUSTRIAL SCHOOL</span>
+                </div>
+            </a>
+
+            <div class="hidden lg:flex items-center space-x-1">
+                <a href="index.html" class="nav-link group relative px-4 py-2 rounded-md font-mono text-xs font-bold text-[#4a5568] hover:text-[#2d3436] transition-all">
+                    BERANDA
+                    <span class="absolute bottom-1 left-1/2 -translate-x-1/2 w-1 h-1 bg-[#ff4757] rounded-full opacity-0 group-[.active]:opacity-100 transition-opacity shadow-[0_0_5px_#ff4757]"></span>
+                </a>
+
+                <a href="akademik.html" class="nav-link group relative px-4 py-2 rounded-md font-mono text-xs font-bold text-[#4a5568] hover:text-[#2d3436] transition-all">
+                    AKADEMIK
+                    <span class="absolute bottom-1 left-1/2 -translate-x-1/2 w-1 h-1 bg-[#ff4757] rounded-full opacity-0 group-[.active]:opacity-100 transition-opacity shadow-[0_0_5px_#ff4757]"></span>
+                </a>
+
+                <a href="kesiswaan.html" class="nav-link group relative px-4 py-2 rounded-md font-mono text-xs font-bold text-[#4a5568] hover:text-[#2d3436] transition-all">
+                    KESISWAAN
+                    <span class="absolute bottom-1 left-1/2 -translate-x-1/2 w-1 h-1 bg-[#ff4757] rounded-full opacity-0 group-[.active]:opacity-100 transition-opacity shadow-[0_0_5px_#ff4757]"></span>
+                </a>
+
+                <a href="fasilitas.html" class="nav-link group relative px-4 py-2 rounded-md font-mono text-xs font-bold text-[#4a5568] hover:text-[#2d3436] transition-all">
+                    FASILITAS
+                    <span class="absolute bottom-1 left-1/2 -translate-x-1/2 w-1 h-1 bg-[#ff4757] rounded-full opacity-0 group-[.active]:opacity-100 transition-opacity shadow-[0_0_5px_#ff4757]"></span>
+                </a>
+
+                <a href="galeri.html" class="nav-link group relative px-4 py-2 rounded-md font-mono text-xs font-bold text-[#4a5568] hover:text-[#2d3436] transition-all">
+                    GALERI
+                    <span class="absolute bottom-1 left-1/2 -translate-x-1/2 w-1 h-1 bg-[#ff4757] rounded-full opacity-0 group-[.active]:opacity-100 transition-opacity shadow-[0_0_5px_#ff4757]"></span>
+                </a>
+
+                <a href="blog.html" class="nav-link group relative px-4 py-2 rounded-md font-mono text-xs font-bold text-[#4a5568] hover:text-[#2d3436] transition-all">
+                    BERITA
+                    <span class="absolute bottom-1 left-1/2 -translate-x-1/2 w-1 h-1 bg-[#ff4757] rounded-full opacity-0 group-[.active]:opacity-100 transition-opacity shadow-[0_0_5px_#ff4757]"></span>
+                </a>
+                 
+                <a href="kontak.html" class="nav-link group relative px-4 py-2 rounded-md font-mono text-xs font-bold text-[#4a5568] hover:text-[#2d3436] transition-all">
+                    KONTAK
+                    <span class="absolute bottom-1 left-1/2 -translate-x-1/2 w-1 h-1 bg-[#ff4757] rounded-full opacity-0 group-[.active]:opacity-100 transition-opacity shadow-[0_0_5px_#ff4757]"></span>
+                </a>
+            </div>
+
+            <div class="hidden lg:block ml-4">
+                <a href="ppdb.html" class="group relative inline-flex items-center gap-2 px-6 py-2.5 bg-[#ff4757] text-white font-mono text-xs font-bold uppercase tracking-widest rounded transition-all shadow-[4px_4px_8px_rgba(166,50,60,0.4),-4px_-4px_8px_rgba(255,100,110,0.4)] hover:shadow-[6px_6px_12px_rgba(166,50,60,0.5),-6px_-6px_12px_rgba(255,100,110,0.5)] active:translate-y-[2px] active:shadow-[inset_4px_4px_8px_rgba(0,0,0,0.2)]">
+                    <i data-lucide="log-in" class="w-4 h-4"></i>
+                    PPDB ONLINE
+                </a>
+            </div>
+
+            <div class="flex lg:hidden">
+                <button onclick="toggleMobileMenu()" class="w-12 h-12 rounded-lg bg-[#e0e5ec] shadow-[4px_4px_8px_#babecc,-4px_-4px_8px_#ffffff] flex items-center justify-center text-[#2d3436] active:shadow-[inset_4px_4px_8px_#babecc,inset_-4px_-4px_8px_#ffffff] transition-all">
+                    <i data-lucide="menu" class="w-6 h-6"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div id="mobileMenu" class="hidden lg:hidden bg-[#e0e5ec] border-t border-white/20 shadow-inner overflow-hidden transition-all duration-300">
+        <div class="px-4 pt-4 pb-6 space-y-2">
+            
+            <a href="index.html" class="mobile-link block px-4 py-3 rounded-lg text-sm font-bold text-[#4a5568] hover:bg-[#d1d9e6] hover:text-[#ff4757] hover:shadow-[inset_2px_2px_5px_#babecc,inset_-2px_-2px_5px_#ffffff] transition-all flex justify-between items-center">
+                BERANDA <i data-lucide="home" class="w-4 h-4 opacity-50"></i>
+            </a>
+            
+            <a href="akademik.html" class="mobile-link block px-4 py-3 rounded-lg text-sm font-bold text-[#4a5568] hover:bg-[#d1d9e6] hover:text-[#ff4757] hover:shadow-[inset_2px_2px_5px_#babecc,inset_-2px_-2px_5px_#ffffff] transition-all flex justify-between items-center">
+                AKADEMIK <i data-lucide="book-open" class="w-4 h-4 opacity-50"></i>
+            </a>
+            
+            <a href="kesiswaan.html" class="mobile-link block px-4 py-3 rounded-lg text-sm font-bold text-[#4a5568] hover:bg-[#d1d9e6] hover:text-[#ff4757] hover:shadow-[inset_2px_2px_5px_#babecc,inset_-2px_-2px_5px_#ffffff] transition-all flex justify-between items-center">
+                KESISWAAN <i data-lucide="users" class="w-4 h-4 opacity-50"></i>
+            </a>
+            
+            <a href="fasilitas.html" class="mobile-link block px-4 py-3 rounded-lg text-sm font-bold text-[#4a5568] hover:bg-[#d1d9e6] hover:text-[#ff4757] hover:shadow-[inset_2px_2px_5px_#babecc,inset_-2px_-2px_5px_#ffffff] transition-all flex justify-between items-center">
+                FASILITAS <i data-lucide="monitor" class="w-4 h-4 opacity-50"></i>
+            </a>
+            
+            <a href="galeri.html" class="mobile-link block px-4 py-3 rounded-lg text-sm font-bold text-[#4a5568] hover:bg-[#d1d9e6] hover:text-[#ff4757] hover:shadow-[inset_2px_2px_5px_#babecc,inset_-2px_-2px_5px_#ffffff] transition-all flex justify-between items-center">
+                GALERI <i data-lucide="image" class="w-4 h-4 opacity-50"></i>
+            </a>
+
+            <a href="blog.html" class="mobile-link block px-4 py-3 rounded-lg text-sm font-bold text-[#4a5568] hover:bg-[#d1d9e6] hover:text-[#ff4757] hover:shadow-[inset_2px_2px_5px_#babecc,inset_-2px_-2px_5px_#ffffff] transition-all flex justify-between items-center">
+                BERITA <i data-lucide="newspaper" class="w-4 h-4 opacity-50"></i>
+            </a>
+            
+            <a href="kontak.html" class="mobile-link block px-4 py-3 rounded-lg text-sm font-bold text-[#4a5568] hover:bg-[#d1d9e6] hover:text-[#ff4757] hover:shadow-[inset_2px_2px_5px_#babecc,inset_-2px_-2px_5px_#ffffff] transition-all flex justify-between items-center">
+                KONTAK <i data-lucide="phone" class="w-4 h-4 opacity-50"></i>
+            </a>
+
+            <div class="pt-4 border-t border-gray-300">
+                <a href="ppdb.html" class="block w-full py-4 bg-[#ff4757] text-white text-center font-mono font-bold uppercase rounded shadow-[4px_4px_8px_#babecc,-4px_-4px_8px_#ffffff] active:translate-y-1 active:shadow-none">
+                    DAFTAR PPDB SEKARANG
+                </a>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<script>
+    // 1. Highlight Active Link
+    document.addEventListener('DOMContentLoaded', () => {
+        const currentPath = window.location.pathname.split('/').pop() || 'index.html';
+        
+        // Desktop Links
+        document.querySelectorAll('.nav-link').forEach(link => {
+            if(link.getAttribute('href') === currentPath) {
+                link.classList.add('active'); // Memicu indikator LED
+                link.classList.remove('text-[#4a5568]');
+                link.classList.add('text-[#2d3436]');
+                // Tambahkan efek shadow recessed/tenggelam untuk item aktif
+                link.classList.add('shadow-[inset_2px_2px_4px_#babecc,inset_-2px_-2px_4px_#ffffff]');
+            }
+        });
+
+        // Mobile Links
+        document.querySelectorAll('.mobile-link').forEach(link => {
+            if(link.getAttribute('href') === currentPath) {
+                link.classList.add('text-[#ff4757]', 'bg-[#d1d9e6]', 'shadow-[inset_2px_2px_5px_#babecc,inset_-2px_-2px_5px_#ffffff]');
+            }
+        });
+    });
+
+    // 2. Toggle Mobile Menu
+    function toggleMobileMenu() {
+        const menu = document.getElementById('mobileMenu');
+        const icon = document.querySelector('.lg\\:hidden button i');
+        
+        if (menu.classList.contains('hidden')) {
+            menu.classList.remove('hidden');
+            // Ganti icon ke X (close) jika perlu, tapi Lucide perlu re-init
+            // Kita biarkan animasi slide saja
+        } else {
+            menu.classList.add('hidden');
+        }
+    }
+
+    // 3. Navbar Scroll Effect (Optional Glass Strengthening)
+    window.addEventListener('scroll', () => {
+        const navbar = document.getElementById('mainNavbar');
+        if (window.scrollY > 10) {
+            navbar.classList.add('shadow-lg');
+            navbar.classList.replace('bg-[#e0e5ec]/90', 'bg-[#e0e5ec]/95');
+        } else {
+            navbar.classList.remove('shadow-lg');
+            navbar.classList.replace('bg-[#e0e5ec]/95', 'bg-[#e0e5ec]/90');
+        }
+    });
+</script>
+
+    <main class="pt-32 pb-24 px-4 md:px-12 max-w-5xl mx-auto">
+
+        <header class="mb-10 text-center md:text-left">
+            <div class="inline-flex items-center gap-2 px-3 py-1 bg-ink/10 rounded border border-ink/20 mb-4">
+                <span class="w-2 h-2 rounded-full bg-safety-green animate-pulse"></span>
+                <span class="font-mono text-[10px] font-bold text-ink uppercase">KATEGORI: PRESTASI</span>
+            </div>
+
+            <h1 class="font-sans font-black text-3xl md:text-5xl lg:text-6xl text-ink uppercase leading-tight mb-6">
+                Tim Robotik SMA Masa Depan Raih <span class="text-transparent bg-clip-text bg-gradient-to-r from-safety-orange to-red-600">Juara Nasional</span> 2026
+            </h1>
+
+            <div class="flex flex-wrap items-center justify-center md:justify-start gap-6 font-mono text-xs text-ink-muted border-y border-white/40 py-4 bg-chassis/50">
+                <div class="flex items-center gap-2">
+                    <i data-lucide="user" class="w-4 h-4"></i> Oleh: Pak Hendra (Humas)
+                </div>
+                <div class="flex items-center gap-2">
+                    <i data-lucide="calendar" class="w-4 h-4"></i> 12 Jan 2026
+                </div>
+                <div class="flex items-center gap-2">
+                    <i data-lucide="clock" class="w-4 h-4"></i> 5 Menit Baca
+                </div>
+            </div>
+        </header>
+
+        <figure class="relative bg-black rounded-2xl overflow-hidden border-4 border-[#1a1c20] shadow-card mb-12 aspect-video group">
+            <img src="https://images.unsplash.com/photo-1581092921461-eab62e97a782?q=80&w=1200&auto=format&fit=crop" 
+                 alt="Tim Robotik SMA Masa Depan sedang merakit robot Alpha-X1"
+                 class="w-full h-full object-cover opacity-90 group-hover:opacity-100 transition-opacity duration-700">
+            <div class="absolute inset-0 bg-scanlines opacity-10 pointer-events-none"></div>
+            
+            <figcaption class="absolute bottom-0 left-0 w-full bg-black/80 backdrop-blur-sm p-4 border-t border-white/20">
+                <div class="flex items-center gap-2 text-white/80 font-mono text-xs">
+                    <i data-lucide="camera" class="w-3 h-3 text-safety-orange"></i>
+                    <span>FIG 1.0: Proses perakitan akhir robot Alpha-X1 di laboratorium sekolah.</span>
+                </div>
+            </figcaption>
+        </figure>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 relative">
+            
+            <article class="lg:col-span-8 content-body">
+                
+                <div class="bg-chassis rounded-xl border border-white/50 shadow-card mb-8 overflow-hidden">
+                    <div class="bg-recessed px-6 py-3 flex justify-between items-center cursor-pointer hover:bg-gray-300 transition-colors" onclick="toggleToc()">
+                        <div class="flex items-center gap-2 font-mono text-xs font-bold text-ink uppercase">
+                            <i data-lucide="list" class="w-4 h-4"></i> System Directory (Daftar Isi)
+                        </div>
+                        <i id="toc-icon" data-lucide="chevron-down" class="w-4 h-4 text-ink transition-transform"></i>
+                    </div>
+                    <div id="toc-body" class="toc-expanded bg-panel p-6 border-t border-white/50">
+                        <ul id="toc-list" class="space-y-2 font-sans text-sm text-ink-muted list-decimal list-inside marker:text-safety-orange marker:font-bold">
+                            </ul>
+                    </div>
+                </div>
+
+                <p>
+                    <strong>Jakarta, 12 Januari 2026</strong> — Kabar membanggakan kembali datang dari unit kegiatan ekstrakurikuler teknologi. Tim Robotik SMA Masa Depan berhasil menyabet gelar Juara 1 Kategori <em>Fire Fighting Robot</em> dalam ajang Kompetisi Robotik Nasional (KRN) yang diselenggarakan di Jakarta Convention Center pekan lalu.
+                </p>
+
+                <h2>Perjalanan Menuju Kemenangan</h2>
+                <p>
+                    Persaingan tahun ini sangat ketat dengan partisipasi lebih dari 100 sekolah dari seluruh Indonesia. Tim sekolah kita, yang beranggotakan 5 siswa dari kelas XI dan XII, telah mempersiapkan diri selama 6 bulan penuh. Fokus utama pengembangan ada pada algoritma navigasi otonom yang memungkinkan robot mendeteksi api lebih cepat 20% dari versi sebelumnya.
+                </p>
+
+                <div class="my-8 p-4 bg-chassis border-l-4 border-ink rounded-r-lg shadow-sm flex flex-col sm:flex-row gap-4 items-center group hover:bg-white transition-colors cursor-pointer">
+                    <div class="shrink-0 font-mono text-xs font-bold text-ink bg-ink/10 px-2 py-1 rounded">BACA JUGA</div>
+                    <div class="flex-1">
+                        <a href="#" class="font-bold text-ink group-hover:text-safety-orange transition-colors">
+                            Profil Ekstrakurikuler Robotik: Mencetak Inovator Masa Depan
+                        </a>
+                    </div>
+                    <i data-lucide="external-link" class="w-4 h-4 text-ink-muted"></i>
+                </div>
+
+                <h3>Inovasi Sensor Termal</h3>
+                <p>
+                    Salah satu kunci kemenangan adalah penggunaan sensor termal array baru. "Kami mengganti sensor inframerah standar dengan sensor array 8x8. Ini memungkinkan robot 'melihat' pola panas api, bukan hanya mendeteksi keberadaannya," jelas Ahmad, ketua tim robotik.
+                </p>
+
+                <blockquote>
+                    "Kemenangan ini bukan akhir, tapi awal dari riset yang lebih besar. Kami berencana mengintegrasikan AI Vision pada kompetisi internasional tahun depan."
+                    <br><br>
+                    <span class="text-sm font-bold not-italic text-ink">— Dr. Budi Santoso, Kepala Sekolah</span>
+                </blockquote>
+
+                <figure class="my-8 bg-chassis p-2 rounded-xl border border-white/50 shadow-sm">
+                    <img src="https://images.unsplash.com/photo-1563206767-5b1d972e8136?q=80&w=800&auto=format&fit=crop" class="w-full h-auto rounded-lg grayscale hover:grayscale-0 transition-all duration-500" alt="Detil Robot">
+                    <figcaption class="text-center font-mono text-[10px] text-ink-muted mt-2">FIG 2.0: Modul Sensor Utama Robot</figcaption>
+                </figure>
+
+                <h2>Tantangan Teknis di Lapangan</h2>
+                <p>
+                    Saat babak semifinal, tim sempat mengalami kendala teknis. Roda kanan robot mengalami slip karena permukaan arena yang licin. Namun, berkat fitur <em>PID Controller</em> yang telah diprogram, robot mampu menstabilkan diri secara otomatis dan tetap menyelesaikan misi tanpa penalti.
+                </p>
+
+                <div class="my-10 relative bg-[#111] p-1 rounded-xl shadow-card overflow-hidden group">
+                    <div class="absolute top-0 right-0 px-2 py-1 bg-safety-yellow text-black font-mono text-[10px] font-bold z-10">
+                        PENDAFTARAN DIBUKA
+                    </div>
+                    <div class="relative rounded-lg overflow-hidden border-2 border-[#333]">
+                        <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExbmZ0ZmZ0ZmZ0ZmZ0ZmZ0ZmZ0ZmZ0ZmZ0ZmZ0ZmZ0/3o7TKrEzvLbsVAud8I/giphy.gif" 
+                             class="w-full h-64 object-cover opacity-60 group-hover:opacity-80 transition-opacity" alt="Promo Robotik">
+                        <div class="absolute inset-0 flex flex-col items-center justify-center text-center p-4">
+                            <h3 class="text-white text-2xl font-black uppercase mb-2 text-emboss" style="border:none; margin:0;">Join Robotics Club</h3>
+                            <p class="text-gray-300 text-sm mb-4 font-mono">Pelajari Arduino, IoT, dan AI mulai dari nol.</p>
+                            <button class="px-6 py-2 bg-safety-orange text-white font-mono text-xs font-bold rounded shadow-lg hover:bg-red-600 transition-colors">
+                                DAFTAR SEKARANG
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="my-8 p-4 bg-chassis border-l-4 border-ink rounded-r-lg shadow-sm flex flex-col sm:flex-row gap-4 items-center group hover:bg-white transition-colors cursor-pointer">
+                    <div class="shrink-0 font-mono text-xs font-bold text-ink bg-ink/10 px-2 py-1 rounded">BACA JUGA</div>
+                    <div class="flex-1">
+                        <a href="#" class="font-bold text-ink group-hover:text-safety-orange transition-colors">
+                            Galeri Foto: Detik-detik Kemenangan di JCC Senayan
+                        </a>
+                    </div>
+                    <i data-lucide="external-link" class="w-4 h-4 text-ink-muted"></i>
+                </div>
+
+                <h2>Kesimpulan</h2>
+                <p>
+                    Prestasi ini membuktikan bahwa siswa SMA Masa Depan memiliki daya saing tinggi di bidang teknologi. Dukungan fasilitas laboratorium dan kurikulum berbasis proyek terbukti efektif mencetak inovator muda. Sekolah berkomitmen untuk terus mendukung pengembangan bakat siswa di masa mendatang.
+                </p>
+
+                <div class="mt-12 bg-white/50 rounded-xl p-6 border border-white shadow-inner">
+                    <h3 style="margin-top:0; border:none;" class="flex items-center gap-2 uppercase font-black text-ink">
+                        <i data-lucide="help-circle" class="w-6 h-6 text-safety-orange"></i> FAQ (Tanya Jawab)
+                    </h3>
+                    
+                    <div class="space-y-2 mt-4">
+                        <div class="border border-ink/10 rounded-lg bg-chassis overflow-hidden faq-item">
+                            <button class="w-full flex justify-between items-center p-4 text-left font-bold text-ink hover:bg-white/50 transition-colors" onclick="toggleFaq(this)">
+                                <span>Apakah ekstrakurikuler ini berbayar?</span>
+                                <i data-lucide="chevron-down" class="faq-icon w-4 h-4 transition-transform"></i>
+                            </button>
+                            <div class="faq-content bg-white/30 px-4">
+                                <p class="py-4 text-sm text-ink-muted m-0">Tidak. Ekstrakurikuler Robotik didanai penuh oleh dana BOS dan komite sekolah untuk peralatan dasarnya.</p>
+                            </div>
+                        </div>
+                        <div class="border border-ink/10 rounded-lg bg-chassis overflow-hidden faq-item">
+                            <button class="w-full flex justify-between items-center p-4 text-left font-bold text-ink hover:bg-white/50 transition-colors" onclick="toggleFaq(this)">
+                                <span>Apakah pemula boleh bergabung?</span>
+                                <i data-lucide="chevron-down" class="faq-icon w-4 h-4 transition-transform"></i>
+                            </button>
+                            <div class="faq-content bg-white/30 px-4">
+                                <p class="py-4 text-sm text-ink-muted m-0">Tentu saja. Kami memiliki kurikulum dasar untuk kelas X yang belum memiliki pengalaman coding atau elektronika.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </article>
+
+            <aside class="lg:col-span-4 space-y-8">
+                
+                <div class="bg-chassis rounded-xl p-6 shadow-card border border-white/40 sticky top-32">
+                    <div class="flex items-center gap-2 mb-4 font-mono text-xs font-bold text-ink-muted uppercase border-b border-black/5 pb-2">
+                        <i data-lucide="pen-tool" class="w-4 h-4"></i> Author Profile
+                    </div>
+                    
+                    <div class="text-center">
+                        <div class="w-24 h-24 mx-auto bg-recessed rounded-full p-1 border border-white shadow-inner mb-4">
+                            <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=80&w=200&auto=format&fit=crop" class="w-full h-full rounded-full object-cover grayscale hover:grayscale-0 transition-all">
+                        </div>
+                        <h4 class="font-bold text-xl text-ink">Pak Hendra</h4>
+                        <p class="text-sm text-safety-orange font-mono mb-4">Koordinator Humas & IT</p>
+                        <p class="text-sm text-ink-muted leading-relaxed mb-6">
+                            Pengajar TIK yang gemar menulis tentang perkembangan teknologi pendidikan dan prestasi siswa.
+                        </p>
+                        <button class="w-full py-2 bg-ink text-white rounded font-mono text-xs font-bold uppercase shadow-lg hover:bg-gray-800 transition-colors">
+                            LIHAT SEMUA ARTIKEL
+                        </button>
+                    </div>
+                </div>
+
+                <div class="bg-chassis rounded-xl p-6 shadow-card border border-white/40 sticky top-[450px]">
+                    <div class="flex items-center gap-2 mb-4 font-mono text-xs font-bold text-ink-muted uppercase border-b border-black/5 pb-2">
+                        <i data-lucide="share-2" class="w-4 h-4"></i> Share Module
+                    </div>
+                    <div class="space-y-3">
+                        <button onclick="shareTo('wa')" class="w-full flex items-center justify-center gap-3 py-3 bg-[#25d366] text-white rounded font-bold text-xs shadow-md active:translate-y-1 transition-all">
+                            <i data-lucide="message-circle" class="w-5 h-5"></i> WHATSAPP
+                        </button>
+                        <button onclick="shareTo('fb')" class="w-full flex items-center justify-center gap-3 py-3 bg-[#1877f2] text-white rounded font-bold text-xs shadow-md active:translate-y-1 transition-all">
+                            <i data-lucide="facebook" class="w-5 h-5"></i> FACEBOOK
+                        </button>
+                        <button onclick="shareTo('twitter')" class="w-full flex items-center justify-center gap-3 py-3 bg-[#1da1f2] text-white rounded font-bold text-xs shadow-md active:translate-y-1 transition-all">
+                            <i data-lucide="twitter" class="w-5 h-5"></i> TWITTER / X
+                        </button>
+                        <button onclick="shareTo('copy')" class="w-full flex items-center justify-center gap-3 py-3 bg-ink text-white rounded font-bold text-xs shadow-md active:translate-y-1 transition-all">
+                            <i data-lucide="link" class="w-5 h-5"></i> SALIN LINK
+                        </button>
+                    </div>
+                </div>
+
+            </aside>
+
+        </div>
+
+        <section class="mt-24 border-t-4 border-ink pt-12">
+            <div class="flex items-center gap-4 mb-8">
+                <div class="w-10 h-10 bg-chassis rounded shadow-card flex items-center justify-center border border-white">
+                    <i data-lucide="layers" class="text-ink"></i>
+                </div>
+                <h2 class="font-sans font-black text-2xl md:text-3xl text-ink uppercase">Artikel Terkait</h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                
+                <div class="group bg-chassis p-1 rounded-2xl shadow-card hover:-translate-y-2 transition-transform duration-300">
+                    <div class="bg-panel h-full rounded-xl p-5 border border-white/50 flex flex-col relative overflow-hidden">
+                        <div class="h-40 bg-black rounded mb-4 overflow-hidden relative">
+                            <img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?q=80&w=400&auto=format&fit=crop" class="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity">
+                            <div class="absolute inset-0 bg-scanlines opacity-20 pointer-events-none"></div>
+                        </div>
+                        <h3 class="font-bold text-ink text-lg leading-tight mb-2 group-hover:text-safety-orange transition-colors">
+                            Pendaftaran Anggota Baru Klub Robotik
+                        </h3>
+                        <p class="text-sm text-ink-muted line-clamp-2 mb-4">
+                            Dibuka untuk seluruh siswa kelas X dan XI. Simak syarat dan ketentuan seleksi...
+                        </p>
+                        <a href="#" class="mt-auto px-4 py-2 bg-chassis border border-ink/20 rounded text-xs font-bold font-mono text-center hover:bg-ink hover:text-white transition-colors">
+                            BACA SELENGKAPNYA
+                        </a>
+                    </div>
+                </div>
+
+                <div class="group bg-chassis p-1 rounded-2xl shadow-card hover:-translate-y-2 transition-transform duration-300">
+                    <div class="bg-panel h-full rounded-xl p-5 border border-white/50 flex flex-col relative overflow-hidden">
+                        <div class="h-40 bg-black rounded mb-4 overflow-hidden relative">
+                            <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=400&auto=format&fit=crop" class="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity">
+                            <div class="absolute inset-0 bg-scanlines opacity-20 pointer-events-none"></div>
+                        </div>
+                        <h3 class="font-bold text-ink text-lg leading-tight mb-2 group-hover:text-safety-orange transition-colors">
+                            Seminar AI untuk Pelajar
+                        </h3>
+                        <p class="text-sm text-ink-muted line-clamp-2 mb-4">
+                            Mengenal dasar-dasar kecerdasan buatan dan penerapannya dalam kehidupan sehari-hari...
+                        </p>
+                        <a href="#" class="mt-auto px-4 py-2 bg-chassis border border-ink/20 rounded text-xs font-bold font-mono text-center hover:bg-ink hover:text-white transition-colors">
+                            BACA SELENGKAPNYA
+                        </a>
+                    </div>
+                </div>
+
+                <div class="group bg-chassis p-1 rounded-2xl shadow-card hover:-translate-y-2 transition-transform duration-300">
+                    <div class="bg-panel h-full rounded-xl p-5 border border-white/50 flex flex-col relative overflow-hidden">
+                        <div class="h-40 bg-black rounded mb-4 overflow-hidden relative">
+                            <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=400&auto=format&fit=crop" class="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity">
+                            <div class="absolute inset-0 bg-scanlines opacity-20 pointer-events-none"></div>
+                        </div>
+                        <h3 class="font-bold text-ink text-lg leading-tight mb-2 group-hover:text-safety-orange transition-colors">
+                            Galeri Lomba Robotik Nasional 2025
+                        </h3>
+                        <p class="text-sm text-ink-muted line-clamp-2 mb-4">
+                            Dokumentasi lengkap perjuangan tim sekolah mulai dari persiapan hingga penyerahan piala...
+                        </p>
+                        <a href="#" class="mt-auto px-4 py-2 bg-chassis border border-ink/20 rounded text-xs font-bold font-mono text-center hover:bg-ink hover:text-white transition-colors">
+                            BACA SELENGKAPNYA
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <script>
+        lucide.createIcons();
+
+        // 1. AUTO TOC GENERATOR
+        document.addEventListener('DOMContentLoaded', () => {
+            const article = document.querySelector('.content-body');
+            const headings = article.querySelectorAll('h2, h3');
+            const tocList = document.getElementById('toc-list');
+
+            if(headings.length === 0) {
+                document.querySelector('.bg-chassis.rounded-xl').style.display = 'none';
+                return;
+            }
+
+            headings.forEach((heading, index) => {
+                const id = heading.id || `heading-${index}`;
+                heading.id = id;
+
+                const li = document.createElement('li');
+                li.className = heading.tagName === 'H2' ? 'ml-0 font-bold' : 'ml-4';
+                
+                const link = document.createElement('a');
+                link.href = `#${id}`;
+                link.textContent = heading.textContent;
+                link.className = 'hover:text-safety-orange hover:underline transition-colors';
+                
+                li.appendChild(link);
+                tocList.appendChild(li);
+            });
+        });
+
+        // 2. TOGGLE TOC
+        function toggleToc() {
+            const body = document.getElementById('toc-body');
+            const icon = document.getElementById('toc-icon');
+            
+            if (body.classList.contains('toc-expanded')) {
+                body.classList.remove('toc-expanded');
+                body.classList.add('toc-collapsed');
+                icon.style.transform = 'rotate(-90deg)';
+            } else {
+                body.classList.remove('toc-collapsed');
+                body.classList.add('toc-expanded');
+                icon.style.transform = 'rotate(0deg)';
+            }
+        }
+
+        // 3. TOGGLE FAQ
+        function toggleFaq(btn) {
+            const parent = btn.parentElement;
+            parent.classList.toggle('faq-open');
+        }
+
+        // 4. ACTIVE SHARE BUTTONS
+        function shareTo(platform) {
+            const url = encodeURIComponent(window.location.href);
+            const text = encodeURIComponent(document.title);
+            let shareUrl = '';
+
+            switch(platform) {
+                case 'wa':
+                    shareUrl = `https://wa.me/?text=${text}%20${url}`;
+                    break;
+                case 'fb':
+                    shareUrl = `https://www.facebook.com/sharer/sharer.php?u=${url}`;
+                    break;
+                case 'twitter':
+                    shareUrl = `https://twitter.com/intent/tweet?text=${text}&url=${url}`;
+                    break;
+                case 'copy':
+                    navigator.clipboard.writeText(window.location.href).then(() => {
+                        alert('Link berhasil disalin ke clipboard!');
+                    });
+                    return;
+            }
+
+            if(shareUrl) window.open(shareUrl, '_blank');
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SMA Harapan Bangsa - Modern Campus</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                    },
+                    colors: {
+                        primary: {
+                            DEFAULT: '#0f172a', /* Slate 900 (Dark Navy) */
+                            light: '#334155',
+                        },
+                        accent: {
+                            DEFAULT: '#2563eb', /* Royal Blue */
+                            hover: '#1d4ed8',
+                        },
+                        highlight: '#facc15', /* Gold/Yellow */
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Pattern Background Halus */
+        .bg-pattern {
+            background-color: #ffffff;
+            background-image: radial-gradient(#e2e8f0 1px, transparent 1px);
+            background-size: 24px 24px;
+        }
+        
+        /* Smooth Fade In Animation */
+        .fade-in-up {
+            animation: fadeInUp 0.8s ease-out forwards;
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .delay-100 { animation-delay: 0.1s; }
+        .delay-200 { animation-delay: 0.2s; }
+        .delay-300 { animation-delay: 0.3s; }
+    </style>
+</head>
+<body class="font-sans text-slate-600 antialiased bg-slate-50">
+
+    <nav class="fixed w-full z-50 transition-all duration-300 bg-white/90 backdrop-blur-md border-b border-slate-200 shadow-sm">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <div class="flex items-center gap-3">
+                <div class="w-10 h-10 bg-accent text-white rounded-lg flex items-center justify-center text-xl shadow-lg shadow-blue-500/30">
+                    <i class="ph-fill ph-student"></i>
+                </div>
+                <div>
+                    <h1 class="font-bold text-slate-800 text-lg leading-none tracking-tight">SMA HARAPAN</h1>
+                    <span class="text-xs font-medium text-slate-400 tracking-wide">EXCELLENCE IN EDUCATION</span>
+                </div>
+            </div>
+
+            <div class="hidden md:flex items-center gap-8 font-medium text-sm text-slate-600">
+                <a href="#" class="hover:text-accent transition-colors">Beranda</a>
+                <a href="#" class="hover:text-accent transition-colors">Profil</a>
+                <a href="#" class="hover:text-accent transition-colors">Akademik</a>
+                <a href="#" class="hover:text-accent transition-colors">Galeri</a>
+                <a href="#" class="px-5 py-2.5 bg-accent hover:bg-accent-hover text-white rounded-full transition-all shadow-lg shadow-blue-500/20 flex items-center gap-2">
+                    <i class="ph-bold ph-user-plus"></i> PPDB Online
+                </a>
+            </div>
+
+            <button class="md:hidden text-2xl text-slate-800">
+                <i class="ph-bold ph-list"></i>
+            </button>
+        </div>
+    </nav>
+
+    <header class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden bg-white">
+        <div class="absolute top-0 right-0 -mr-20 -mt-20 w-[600px] h-[600px] bg-blue-50 rounded-full blur-3xl opacity-50 -z-10"></div>
+        <div class="absolute bottom-0 left-0 -ml-20 -mb-20 w-[400px] h-[400px] bg-yellow-50 rounded-full blur-3xl opacity-50 -z-10"></div>
+
+        <div class="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-12 items-center">
+            
+            <div class="space-y-8 fade-in-up">
+                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-50 border border-blue-100 text-accent text-xs font-bold tracking-wide uppercase">
+                    <span class="w-2 h-2 rounded-full bg-accent animate-pulse"></span>
+                    Penerimaan Siswa Baru 2026
+                </div>
+                
+                <h1 class="text-5xl lg:text-6xl font-extrabold text-slate-900 leading-[1.15] tracking-tight">
+                    Wujudkan Masa Depan <br>
+                    <span class="text-accent relative inline-block">
+                        Gemilang
+                        <svg class="absolute w-full h-3 -bottom-1 left-0 text-yellow-300 -z-10" viewBox="0 0 100 10" preserveAspectRatio="none">
+                            <path d="M0 5 Q 50 10 100 5" stroke="currentColor" stroke-width="8" fill="none" />
+                        </svg>
+                    </span>
+                    Bersama Kami
+                </h1>
+                
+                <p class="text-lg text-slate-500 leading-relaxed max-w-lg">
+                    Sekolah penggerak dengan kurikulum internasional yang mengedepankan karakter, teknologi, dan prestasi global.
+                </p>
+                
+                <div class="flex flex-wrap gap-4">
+                    <a href="#" class="px-7 py-3.5 bg-slate-900 text-white rounded-full font-semibold hover:bg-slate-800 transition-all shadow-xl shadow-slate-900/20 flex items-center gap-2">
+                        Daftar Sekarang <i class="ph-bold ph-arrow-right"></i>
+                    </a>
+                    <a href="#" class="px-7 py-3.5 bg-white text-slate-700 border border-slate-200 rounded-full font-semibold hover:bg-slate-50 transition-all flex items-center gap-2">
+                        <i class="ph-fill ph-play-circle text-accent text-xl"></i> Tonton Video Profil
+                    </a>
+                </div>
+
+                <div class="pt-8 flex items-center gap-8 border-t border-slate-100">
+                    <div>
+                        <div class="text-2xl font-bold text-slate-900">1.2k+</div>
+                        <div class="text-sm text-slate-500">Siswa Aktif</div>
+                    </div>
+                    <div class="w-px h-10 bg-slate-200"></div>
+                    <div>
+                        <div class="text-2xl font-bold text-slate-900">50+</div>
+                        <div class="text-sm text-slate-500">Penghargaan</div>
+                    </div>
+                    <div class="w-px h-10 bg-slate-200"></div>
+                    <div>
+                        <div class="text-2xl font-bold text-slate-900">A</div>
+                        <div class="text-sm text-slate-500">Akreditasi</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="relative lg:h-[600px] fade-in-up delay-200 hidden lg:block">
+                <div class="absolute right-0 top-0 w-4/5 h-4/5 rounded-3xl overflow-hidden shadow-2xl shadow-blue-900/10 z-10">
+                    <img src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?q=80&w=1000&auto=format&fit=crop" class="w-full h-full object-cover hover:scale-105 transition-transform duration-700" alt="Students">
+                </div>
+                <div class="absolute left-0 bottom-10 w-3/5 h-3/5 rounded-3xl overflow-hidden shadow-2xl shadow-slate-900/10 border-4 border-white z-20">
+                    <img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?q=80&w=1000&auto=format&fit=crop" class="w-full h-full object-cover hover:scale-105 transition-transform duration-700" alt="Classroom">
+                </div>
+                <div class="absolute top-10 left-10 w-24 h-24 bg-white rounded-full shadow-xl flex flex-col items-center justify-center z-30 animate-bounce" style="animation-duration: 3s;">
+                    <span class="text-3xl font-black text-highlight">25</span>
+                    <span class="text-[10px] font-bold text-slate-400 uppercase text-center leading-tight">Tahun<br>Berdiri</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="py-20 bg-pattern">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center max-w-2xl mx-auto mb-16 fade-in-up">
+                <span class="text-accent font-bold tracking-wider text-sm uppercase">Program Akademik</span>
+                <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mt-2 mb-4">Pilih Minat & Bakatmu</h2>
+                <p class="text-slate-500">Kami menyediakan berbagai program spesialisasi untuk mempersiapkan siswa menuju jenjang universitas terbaik.</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white rounded-2xl p-8 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 border border-slate-100 group cursor-pointer fade-in-up delay-100">
+                    <div class="w-14 h-14 bg-blue-50 text-accent rounded-xl flex items-center justify-center text-3xl mb-6 group-hover:bg-accent group-hover:text-white transition-colors">
+                        <i class="ph-fill ph-flask"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-3">MIPA (Sains)</h3>
+                    <p class="text-slate-500 leading-relaxed mb-6">Fokus pada ilmu pengetahuan alam, matematika, dan riset ilmiah untuk calon dokter dan insinyur.</p>
+                    <span class="text-accent font-semibold text-sm flex items-center gap-2 group-hover:gap-3 transition-all">
+                        Selengkapnya <i class="ph-bold ph-arrow-right"></i>
+                    </span>
+                </div>
+
+                <div class="bg-white rounded-2xl p-8 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 border border-slate-100 group cursor-pointer fade-in-up delay-200">
+                    <div class="w-14 h-14 bg-yellow-50 text-yellow-600 rounded-xl flex items-center justify-center text-3xl mb-6 group-hover:bg-yellow-500 group-hover:text-white transition-colors">
+                        <i class="ph-fill ph-globe-hemisphere-west"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-3">IPS (Sosial)</h3>
+                    <p class="text-slate-500 leading-relaxed mb-6">Mempelajari dinamika masyarakat, ekonomi, dan hubungan internasional untuk calon pemimpin.</p>
+                    <span class="text-yellow-600 font-semibold text-sm flex items-center gap-2 group-hover:gap-3 transition-all">
+                        Selengkapnya <i class="ph-bold ph-arrow-right"></i>
+                    </span>
+                </div>
+
+                <div class="bg-white rounded-2xl p-8 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 border border-slate-100 group cursor-pointer fade-in-up delay-300">
+                    <div class="w-14 h-14 bg-purple-50 text-purple-600 rounded-xl flex items-center justify-center text-3xl mb-6 group-hover:bg-purple-600 group-hover:text-white transition-colors">
+                        <i class="ph-fill ph-translate"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-3">Bahasa & Budaya</h3>
+                    <p class="text-slate-500 leading-relaxed mb-6">Mendalami linguistik asing dan kebudayaan global untuk komunikasi lintas negara.</p>
+                    <span class="text-purple-600 font-semibold text-sm flex items-center gap-2 group-hover:gap-3 transition-all">
+                        Selengkapnya <i class="ph-bold ph-arrow-right"></i>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 bg-white border-t border-slate-100">
+        <div class="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-16">
+            
+            <div class="fade-in-up">
+                <span class="text-accent font-bold tracking-wider text-sm uppercase">Kabar Sekolah</span>
+                <h2 class="text-3xl font-bold text-slate-900 mt-2 mb-8">Berita & Pengumuman Terbaru</h2>
+                
+                <div class="group relative rounded-2xl overflow-hidden cursor-pointer">
+                    <img src="https://images.unsplash.com/photo-1544531696-60c35eb543f9?q=80&w=800&auto=format&fit=crop" class="w-full h-80 object-cover group-hover:scale-105 transition-transform duration-700" alt="News">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
+                    <div class="absolute bottom-0 left-0 p-8 text-white">
+                        <span class="bg-accent px-3 py-1 rounded-md text-xs font-bold mb-2 inline-block">PRESTASI</span>
+                        <h3 class="text-2xl font-bold leading-tight mb-2 group-hover:text-blue-200 transition-colors">Tim Robotik Raih Juara 1 Nasional</h3>
+                        <p class="text-white/80 line-clamp-2 text-sm">Siswa SMA Harapan kembali membanggakan nama sekolah di kancah nasional dalam kompetisi...</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex flex-col justify-center space-y-6 fade-in-up delay-200">
+                <a href="#" class="flex gap-4 group">
+                    <div class="flex flex-col items-center justify-center w-16 h-16 bg-slate-50 rounded-xl border border-slate-200 flex-shrink-0 text-slate-600 font-bold leading-tight">
+                        <span class="text-xl">12</span>
+                        <span class="text-[10px] uppercase">Jan</span>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-slate-800 text-lg group-hover:text-accent transition-colors">Jadwal Ujian Akhir Semester Ganjil</h4>
+                        <p class="text-sm text-slate-500 mt-1 line-clamp-2">Informasi lengkap mengenai jadwal dan tata tertib pelaksanaan UAS tahun ajaran 2025/2026.</p>
+                    </div>
+                </a>
+
+                <a href="#" class="flex gap-4 group">
+                    <div class="flex flex-col items-center justify-center w-16 h-16 bg-slate-50 rounded-xl border border-slate-200 flex-shrink-0 text-slate-600 font-bold leading-tight">
+                        <span class="text-xl">08</span>
+                        <span class="text-[10px] uppercase">Jan</span>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-slate-800 text-lg group-hover:text-accent transition-colors">Kunjungan Studi Banding dari SMA 1 Jakarta</h4>
+                        <p class="text-sm text-slate-500 mt-1 line-clamp-2">Menerima kunjungan persahabatan untuk bertukar wawasan mengenai kurikulum merdeka.</p>
+                    </div>
+                </a>
+
+                <a href="#" class="flex gap-4 group">
+                    <div class="flex flex-col items-center justify-center w-16 h-16 bg-slate-50 rounded-xl border border-slate-200 flex-shrink-0 text-slate-600 font-bold leading-tight">
+                        <span class="text-xl">01</span>
+                        <span class="text-[10px] uppercase">Jan</span>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-slate-800 text-lg group-hover:text-accent transition-colors">Pembukaan Pendaftaran Ekstrakurikuler</h4>
+                        <p class="text-sm text-slate-500 mt-1 line-clamp-2">Ayo kembangkan bakatmu! Pendaftaran ekskul dibuka mulai hari ini melalui wali kelas.</p>
+                    </div>
+                </a>
+                
+                <a href="#" class="inline-flex items-center gap-2 text-accent font-semibold mt-4 hover:gap-3 transition-all">
+                    Lihat Semua Berita <i class="ph-bold ph-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 px-6">
+        <div class="max-w-6xl mx-auto bg-gradient-to-r from-slate-900 to-slate-800 rounded-3xl p-12 text-center text-white relative overflow-hidden shadow-2xl">
+            <div class="absolute top-0 left-0 w-64 h-64 bg-white opacity-5 rounded-full blur-3xl -ml-20 -mt-20"></div>
+            <div class="absolute bottom-0 right-0 w-64 h-64 bg-blue-500 opacity-20 rounded-full blur-3xl -mr-20 -mb-20"></div>
+
+            <h2 class="text-3xl md:text-4xl font-bold mb-6 relative z-10">Siap Bergabung Menjadi Bagian Kami?</h2>
+            <p class="text-slate-300 max-w-2xl mx-auto mb-10 text-lg relative z-10">Dapatkan akses ke fasilitas pembelajaran modern dan lingkungan yang mendukung prestasi akademik maupun non-akademik.</p>
+            
+            <div class="flex flex-col sm:flex-row gap-4 justify-center relative z-10">
+                <a href="#" class="px-8 py-4 bg-accent hover:bg-accent-hover text-white rounded-full font-bold transition-all shadow-lg shadow-blue-500/30">
+                    Daftar PPDB Online
+                </a>
+                <a href="#" class="px-8 py-4 bg-transparent border border-white/20 hover:bg-white/10 text-white rounded-full font-bold transition-all backdrop-blur-sm">
+                    Unduh Brosur
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-white border-t border-slate-200 pt-16 pb-8">
+        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-4 gap-12 mb-12">
+            <div class="col-span-1 md:col-span-1">
+                <div class="flex items-center gap-2 mb-6">
+                    <div class="w-8 h-8 bg-accent text-white rounded-lg flex items-center justify-center">
+                        <i class="ph-fill ph-student"></i>
+                    </div>
+                    <span class="font-bold text-slate-800 text-lg">SMA HARAPAN</span>
+                </div>
+                <p class="text-slate-500 text-sm leading-relaxed mb-6">Membentuk karakter, meraih prestasi, dan membangun masa depan yang cerah bagi generasi penerus bangsa.</p>
+                <div class="flex gap-4">
+                    <a href="#" class="w-10 h-10 rounded-full bg-slate-50 text-slate-600 flex items-center justify-center hover:bg-accent hover:text-white transition-all"><i class="ph-fill ph-facebook-logo"></i></a>
+                    <a href="#" class="w-10 h-10 rounded-full bg-slate-50 text-slate-600 flex items-center justify-center hover:bg-accent hover:text-white transition-all"><i class="ph-fill ph-instagram-logo"></i></a>
+                    <a href="#" class="w-10 h-10 rounded-full bg-slate-50 text-slate-600 flex items-center justify-center hover:bg-accent hover:text-white transition-all"><i class="ph-fill ph-youtube-logo"></i></a>
+                </div>
+            </div>
+            
+            <div>
+                <h4 class="font-bold text-slate-900 mb-6">Tautan Cepat</h4>
+                <ul class="space-y-3 text-sm text-slate-500">
+                    <li><a href="#" class="hover:text-accent transition-colors">Profil Sekolah</a></li>
+                    <li><a href="#" class="hover:text-accent transition-colors">Visi & Misi</a></li>
+                    <li><a href="#" class="hover:text-accent transition-colors">Tenaga Pengajar</a></li>
+                    <li><a href="#" class="hover:text-accent transition-colors">Ekstrakurikuler</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="font-bold text-slate-900 mb-6">Akademik</h4>
+                <ul class="space-y-3 text-sm text-slate-500">
+                    <li><a href="#" class="hover:text-accent transition-colors">Jadwal Pelajaran</a></li>
+                    <li><a href="#" class="hover:text-accent transition-colors">Kalender Akademik</a></li>
+                    <li><a href="#" class="hover:text-accent transition-colors">E-Learning</a></li>
+                    <li><a href="#" class="hover:text-accent transition-colors">E-Rapor</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="font-bold text-slate-900 mb-6">Kontak Kami</h4>
+                <ul class="space-y-4 text-sm text-slate-500">
+                    <li class="flex gap-3">
+                        <i class="ph-fill ph-map-pin text-accent text-lg"></i>
+                        <span>Jl. Pendidikan No. 123, Malang,<br>Jawa Timur 65145</span>
+                    </li>
+                    <li class="flex gap-3">
+                        <i class="ph-fill ph-phone text-accent text-lg"></i>
+                        <span>(0341) 123-4567</span>
+                    </li>
+                    <li class="flex gap-3">
+                        <i class="ph-fill ph-envelope text-accent text-lg"></i>
+                        <span>info@smaharapan.sch.id</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="max-w-7xl mx-auto px-6 pt-8 border-t border-slate-100 flex flex-col md:flex-row justify-between items-center text-sm text-slate-400">
+            <p>&copy; 2026 SMA Harapan Bangsa. All rights reserved.</p>
+            <div class="flex gap-6 mt-4 md:mt-0">
+                <a href="#" class="hover:text-slate-600">Privacy Policy</a>
+                <a href="#" class="hover:text-slate-600">Terms of Service</a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

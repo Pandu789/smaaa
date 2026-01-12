@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SMA MASA DEPAN - Kesiswaan & Fasilitas</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+    
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        chassis: '#e0e5ec',
+                        panel: '#f0f2f5',
+                        recessed: '#d1d9e6',
+                        ink: { DEFAULT: '#2d3436', muted: '#4a5568' },
+                        safety: { orange: '#ff4757', green: '#00ff41' }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        mono: ['JetBrains Mono', 'monospace'],
+                    },
+                    boxShadow: {
+                        'card': '8px 8px 16px #babecc, -8px -8px 16px #ffffff',
+                        'floating': '12px 12px 24px #babecc, -12px -12px 24px #ffffff, inset 1px 1px 0 rgba(255,255,255,0.5)',
+                        'pressed': 'inset 6px 6px 12px #babecc, inset -6px -6px 12px #ffffff',
+                        'recessed': 'inset 4px 4px 8px #babecc, inset -4px -4px 8px #ffffff',
+                        'vent': 'inset 1px 1px 2px rgba(0,0,0,0.1)',
+                        'led': '0 0 10px 2px rgba(255, 71, 87, 0.6)',
+                    },
+                    backgroundImage: {
+                        'scanlines': 'linear-gradient(rgba(18,16,16,0) 50%, rgba(0,0,0,0.25) 50%)',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body { background-color: #e0e5ec; color: #2d3436; }
+        .noise-overlay {
+            position: fixed; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; z-index: 50; opacity: 0.4;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+            mix-blend-mode: overlay;
+        }
+        .text-emboss { text-shadow: 0 1px 0 #ffffff; }
+        .btn-physical { transition: all 150ms; }
+        .btn-physical:active { transform: translateY(2px); box-shadow: inset 6px 6px 12px #babecc, inset -6px -6px 12px #ffffff !important; }
+        
+        /* Grid Pattern untuk Background Fasilitas */
+        .bg-grid-pattern {
+            background-image: linear-gradient(#2d3436 1px, transparent 1px), linear-gradient(90deg, #2d3436 1px, transparent 1px);
+            background-size: 40px 40px;
+        }
+    </style>
+</head>
+<body class="antialiased overflow-x-hidden selection:bg-safety-orange selection:text-white">
+
+    <div class="noise-overlay"></div>
+
+    <nav class="fixed top-0 w-full z-40 bg-chassis/90 backdrop-blur-sm border-b border-white/20 shadow-card px-6 py-4">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <a href="index.html" class="flex items-center gap-3 group">
+                <div class="w-10 h-10 rounded-lg bg-chassis shadow-card flex items-center justify-center border border-white/50 group-hover:scale-105 transition-transform">
+                    <i data-lucide="arrow-left" class="text-ink w-5 h-5"></i>
+                </div>
+                <div class="flex flex-col">
+                    <span class="font-sans font-black text-lg text-ink text-emboss uppercase">KESISWAAN</span>
+                    <span class="font-mono text-[10px] tracking-widest text-safety-orange uppercase">STUDENT_AFFAIRS</span>
+                </div>
+            </a>
+            <div class="hidden md:flex gap-4">
+                <span class="font-mono text-xs text-ink-muted self-center">MODUL AKTIVITAS SISWA</span>
+            </div>
+        </div>
+    </nav>
+
+    <main class="pt-32 pb-24 px-4 md:px-12 max-w-7xl mx-auto space-y-24">
+
+        <section>
+            <div class="flex items-center gap-2 mb-8">
+                <div class="w-2 h-8 bg-safety-orange rounded-sm"></div>
+                <h2 class="font-sans font-black text-3xl md:text-4xl text-ink uppercase text-emboss">Pimpinan Organisasi</h2>
+                <div class="h-px flex-1 bg-ink/20 ml-4"></div>
+                <span class="font-mono text-xs text-ink-muted hidden md:inline">COMMAND_CENTER</span>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="relative bg-chassis rounded-3xl p-8 shadow-card border border-white/40 overflow-hidden group">
+                    <div class="absolute -right-12 -top-12 w-48 h-48 bg-yellow-400/10 rounded-full blur-3xl group-hover:bg-yellow-400/20 transition-all"></div>
+                    
+                    <div class="flex items-start justify-between mb-8">
+                        <div>
+                            <span class="font-mono text-xs font-bold text-yellow-600 bg-yellow-100 px-2 py-1 rounded border border-yellow-200">EKSEKUTIF</span>
+                            <h3 class="font-sans font-black text-3xl text-ink mt-2">OSIS</h3>
+                            <p class="font-mono text-xs text-ink-muted">Organisasi Siswa Intra Sekolah</p>
+                        </div>
+                        <i data-lucide="shield" class="w-12 h-12 text-ink opacity-20"></i>
+                    </div>
+
+                    <div class="space-y-4 mb-8">
+                        <div class="flex items-center gap-4 p-3 bg-recessed rounded-lg border border-black/5">
+                            <div class="w-10 h-10 rounded-full bg-gray-400"></div>
+                            <div>
+                                <div class="font-bold text-ink text-sm">Ketua Umum</div>
+                                <div class="font-mono text-[10px] text-ink-muted">UNIT_LEADER_01</div>
+                            </div>
+                        </div>
+                        <p class="text-sm text-ink-muted leading-relaxed">
+                            Bertanggung jawab atas eksekusi program kerja sekolah, pensi, dan kegiatan sosial harian.
+                        </p>
+                    </div>
+
+                    <button class="btn-physical w-full bg-chassis border-2 border-ink text-ink py-3 rounded font-bold uppercase text-xs tracking-widest hover:bg-ink hover:text-white flex items-center justify-center gap-2">
+                        Struktur Organisasi <i data-lucide="chevron-right" class="w-4 h-4"></i>
+                    </button>
+                </div>
+
+                <div class="relative bg-[#2d3035] rounded-3xl p-8 shadow-card border border-black/20 overflow-hidden group">
+                    <div class="absolute -right-12 -top-12 w-48 h-48 bg-white/5 rounded-full blur-3xl"></div>
+                    
+                    <div class="flex items-start justify-between mb-8">
+                        <div>
+                            <span class="font-mono text-xs font-bold text-white bg-white/20 px-2 py-1 rounded border border-white/10">LEGISLATIF</span>
+                            <h3 class="font-sans font-black text-3xl text-white mt-2">MPK</h3>
+                            <p class="font-mono text-xs text-gray-400">Majelis Perwakilan Kelas</p>
+                        </div>
+                        <i data-lucide="scale" class="w-12 h-12 text-white opacity-20"></i>
+                    </div>
+
+                    <div class="space-y-4 mb-8">
+                        <div class="flex items-center gap-4 p-3 bg-black/20 rounded-lg border border-white/5">
+                            <div class="w-10 h-10 rounded-full bg-gray-600"></div>
+                            <div>
+                                <div class="font-bold text-white text-sm">Ketua MPK</div>
+                                <div class="font-mono text-[10px] text-gray-400">UNIT_LEADER_02</div>
+                            </div>
+                        </div>
+                        <p class="text-sm text-gray-400 leading-relaxed">
+                            Mengawasi kinerja OSIS, menampung aspirasi siswa, dan menetapkan Anggaran Dasar.
+                        </p>
+                    </div>
+
+                    <button class="btn-physical w-full bg-safety-orange text-white py-3 rounded font-bold uppercase text-xs tracking-widest hover:brightness-110 flex items-center justify-center gap-2 shadow-lg">
+                        Lapor Aspirasi <i data-lucide="message-square" class="w-4 h-4"></i>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="mb-10 text-center">
+                <h2 class="font-sans font-black text-3xl text-ink uppercase text-emboss">Ekstrakurikuler</h2>
+                <p class="font-mono text-xs text-ink-muted mt-2 uppercase tracking-wider">Select Plugin Module to Initialize</p>
+            </div>
+
+            <div class="flex justify-center gap-4 mb-8">
+                <button class="px-4 py-2 bg-ink text-white rounded font-mono text-xs font-bold shadow-pressed">SEMUA</button>
+                <button class="px-4 py-2 bg-chassis text-ink-muted rounded font-mono text-xs font-bold shadow-card hover:text-safety-orange">WAJIB</button>
+                <button class="px-4 py-2 bg-chassis text-ink-muted rounded font-mono text-xs font-bold shadow-card hover:text-safety-orange">PILIHAN</button>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                
+                <div class="group bg-chassis p-1 rounded-2xl shadow-card hover:-translate-y-1 transition-transform duration-300">
+                    <div class="bg-panel h-full rounded-xl p-6 border border-white/50 relative overflow-hidden flex flex-col items-center text-center">
+                        <div class="absolute top-2 right-2 w-2 h-2 bg-safety-green rounded-full shadow-[0_0_5px_#00ff41]"></div>
+                        
+                        <div class="w-16 h-16 rounded-full bg-[#5d4037] shadow-floating flex items-center justify-center mb-4 border-4 border-chassis">
+                            <i data-lucide="tent" class="text-white w-8 h-8"></i>
+                        </div>
+                        <h3 class="font-bold text-ink text-lg uppercase mb-1">Pramuka</h3>
+                        <span class="text-[10px] font-mono bg-recessed px-2 py-0.5 rounded text-ink-muted mb-4">MANDATORY_UNIT</span>
+                        <p class="text-sm text-ink-muted mb-6">Membentuk karakter kepemimpinan, kemandirian, dan survival skill.</p>
+                        <button class="mt-auto text-safety-orange font-mono text-xs font-bold flex items-center gap-1 group-hover:gap-2 transition-all">
+                            DETAILS <i data-lucide="chevron-right" class="w-3 h-3"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="group bg-chassis p-1 rounded-2xl shadow-card hover:-translate-y-1 transition-transform duration-300">
+                    <div class="bg-panel h-full rounded-xl p-6 border border-white/50 relative overflow-hidden flex flex-col items-center text-center">
+                        <div class="absolute top-2 right-2 w-2 h-2 bg-gray-400 rounded-full"></div>
+                        
+                        <div class="w-16 h-16 rounded-full bg-[#c62828] shadow-floating flex items-center justify-center mb-4 border-4 border-chassis">
+                            <i data-lucide="cross" class="text-white w-8 h-8"></i>
+                        </div>
+                        <h3 class="font-bold text-ink text-lg uppercase mb-1">PMR Wira</h3>
+                        <span class="text-[10px] font-mono bg-recessed px-2 py-0.5 rounded text-ink-muted mb-4">MEDICAL_UNIT</span>
+                        <p class="text-sm text-ink-muted mb-6">Pelatihan pertolongan pertama, siaga bencana, dan bakti sosial.</p>
+                        <button class="mt-auto text-safety-orange font-mono text-xs font-bold flex items-center gap-1 group-hover:gap-2 transition-all">
+                            DETAILS <i data-lucide="chevron-right" class="w-3 h-3"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="group bg-chassis p-1 rounded-2xl shadow-card hover:-translate-y-1 transition-transform duration-300">
+                    <div class="bg-panel h-full rounded-xl p-6 border border-white/50 relative overflow-hidden flex flex-col items-center text-center">
+                        <div class="absolute top-2 right-2 w-2 h-2 bg-safety-green rounded-full shadow-[0_0_5px_#00ff41]"></div>
+                        
+                        <div class="w-16 h-16 rounded-full bg-[#2962ff] shadow-floating flex items-center justify-center mb-4 border-4 border-chassis">
+                            <i data-lucide="cpu" class="text-white w-8 h-8"></i>
+                        </div>
+                        <h3 class="font-bold text-ink text-lg uppercase mb-1">IT Club</h3>
+                        <span class="text-[10px] font-mono bg-recessed px-2 py-0.5 rounded text-ink-muted mb-4">TECH_UNIT</span>
+                        <p class="text-sm text-ink-muted mb-6">Coding, desain grafis, robotika, dan manajemen jaringan.</p>
+                        <button class="mt-auto text-safety-orange font-mono text-xs font-bold flex items-center gap-1 group-hover:gap-2 transition-all">
+                            DETAILS <i data-lucide="chevron-right" class="w-3 h-3"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="group bg-chassis p-1 rounded-2xl shadow-card hover:-translate-y-1 transition-transform duration-300">
+                    <div class="bg-panel h-full rounded-xl p-6 border border-white/50 relative overflow-hidden flex flex-col items-center text-center">
+                        <div class="w-16 h-16 rounded-full bg-black shadow-floating flex items-center justify-center mb-4 border-4 border-chassis">
+                            <i data-lucide="flag" class="text-white w-8 h-8"></i>
+                        </div>
+                        <h3 class="font-bold text-ink text-lg uppercase mb-1">Paskibra</h3>
+                        <span class="text-[10px] font-mono bg-recessed px-2 py-0.5 rounded text-ink-muted mb-4">DISCIPLINE_UNIT</span>
+                        <p class="text-sm text-ink-muted mb-6">Latihan baris-berbaris dan pengibaran bendera.</p>
+                        <button class="mt-auto text-safety-orange font-mono text-xs font-bold flex items-center gap-1 group-hover:gap-2 transition-all">
+                            DETAILS <i data-lucide="chevron-right" class="w-3 h-3"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="group bg-chassis p-1 rounded-2xl shadow-card hover:-translate-y-1 transition-transform duration-300">
+                    <div class="bg-panel h-full rounded-xl p-6 border border-white/50 relative overflow-hidden flex flex-col items-center text-center">
+                        <div class="w-16 h-16 rounded-full bg-orange-600 shadow-floating flex items-center justify-center mb-4 border-4 border-chassis">
+                            <i data-lucide="trophy" class="text-white w-8 h-8"></i>
+                        </div>
+                        <h3 class="font-bold text-ink text-lg uppercase mb-1">Basket</h3>
+                        <span class="text-[10px] font-mono bg-recessed px-2 py-0.5 rounded text-ink-muted mb-4">SPORT_UNIT</span>
+                        <p class="text-sm text-ink-muted mb-6">Tim olahraga prestasi dengan jadwal latihan intensif.</p>
+                        <button class="mt-auto text-safety-orange font-mono text-xs font-bold flex items-center gap-1 group-hover:gap-2 transition-all">
+                            DETAILS <i data-lucide="chevron-right" class="w-3 h-3"></i>
+                        </button>
+                    </div>
+                </div>
+
+                 <div class="group bg-chassis p-1 rounded-2xl shadow-card hover:-translate-y-1 transition-transform duration-300">
+                    <div class="bg-panel h-full rounded-xl p-6 border border-white/50 relative overflow-hidden flex flex-col items-center text-center">
+                        <div class="w-16 h-16 rounded-full bg-purple-600 shadow-floating flex items-center justify-center mb-4 border-4 border-chassis">
+                            <i data-lucide="music" class="text-white w-8 h-8"></i>
+                        </div>
+                        <h3 class="font-bold text-ink text-lg uppercase mb-1">Seni Musik</h3>
+                        <span class="text-[10px] font-mono bg-recessed px-2 py-0.5 rounded text-ink-muted mb-4">ART_UNIT</span>
+                        <p class="text-sm text-ink-muted mb-6">Band, paduan suara, dan ansambel musik modern.</p>
+                        <button class="mt-auto text-safety-orange font-mono text-xs font-bold flex items-center gap-1 group-hover:gap-2 transition-all">
+                            DETAILS <i data-lucide="chevron-right" class="w-3 h-3"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+            
+            <div>
+                <h3 class="font-sans font-black text-2xl text-ink uppercase mb-6 flex items-center gap-2">
+                    <i data-lucide="star" class="text-yellow-500 fill-current"></i> Prestasi Siswa
+                </h3>
+                
+                <div class="bg-chassis rounded-xl shadow-card border border-white overflow-hidden">
+                    <div class="p-1">
+                        <div class="grid grid-cols-4 gap-4 px-4 py-2 font-mono text-[10px] text-ink-muted uppercase font-bold border-b border-black/5 bg-recessed rounded-t">
+                            <div class="col-span-2">Achievement</div>
+                            <div class="text-center">Rank</div>
+                            <div class="text-right">Year</div>
+                        </div>
+
+                        <div class="grid grid-cols-4 gap-4 px-4 py-3 border-b border-black/5 items-center hover:bg-white/40 transition-colors">
+                            <div class="col-span-2">
+                                <div class="font-bold text-ink text-sm">Olimpiade Fisika</div>
+                                <div class="text-[10px] text-ink-muted">Tingkat Nasional</div>
+                            </div>
+                            <div class="text-center">
+                                <span class="bg-yellow-400/20 text-yellow-700 px-2 py-0.5 rounded text-[10px] font-bold border border-yellow-400/50">GOLD</span>
+                            </div>
+                            <div class="text-right font-mono text-xs text-ink-muted">2025</div>
+                        </div>
+                        
+                        <div class="grid grid-cols-4 gap-4 px-4 py-3 border-b border-black/5 items-center hover:bg-white/40 transition-colors">
+                            <div class="col-span-2">
+                                <div class="font-bold text-ink text-sm">Futsal Cup</div>
+                                <div class="text-[10px] text-ink-muted">Regional Malang</div>
+                            </div>
+                            <div class="text-center">
+                                <span class="bg-gray-300 text-gray-700 px-2 py-0.5 rounded text-[10px] font-bold border border-gray-400">SILVER</span>
+                            </div>
+                            <div class="text-right font-mono text-xs text-ink-muted">2025</div>
+                        </div>
+
+                        <div class="grid grid-cols-4 gap-4 px-4 py-3 items-center hover:bg-white/40 transition-colors">
+                            <div class="col-span-2">
+                                <div class="font-bold text-ink text-sm">Debat Bahasa Inggris</div>
+                                <div class="text-[10px] text-ink-muted">Provinsi Jatim</div>
+                            </div>
+                            <div class="text-center">
+                                <span class="bg-orange-300/30 text-orange-700 px-2 py-0.5 rounded text-[10px] font-bold border border-orange-300">BRONZE</span>
+                            </div>
+                            <div class="text-right font-mono text-xs text-ink-muted">2024</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <h3 class="font-sans font-black text-2xl text-ink uppercase mb-6 flex items-center gap-2">
+                    <i data-lucide="briefcase" class="text-blue-500"></i> Alumni Terkini
+                </h3>
+                
+                <div class="space-y-4">
+                    <div class="flex items-center gap-4 bg-chassis p-4 rounded-xl shadow-card border border-white/40">
+                        <div class="w-12 h-12 bg-recessed rounded-full overflow-hidden border border-white shadow-inner">
+                            <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?q=80&w=100&auto=format&fit=crop" class="w-full h-full object-cover grayscale">
+                        </div>
+                        <div class="flex-1">
+                            <h4 class="font-bold text-ink">Budi Prakoso</h4>
+                            <p class="text-xs text-ink-muted">CEO StartUp Tekno</p>
+                        </div>
+                        <div class="text-right">
+                            <div class="font-mono text-[10px] text-ink-muted uppercase">Batch</div>
+                            <div class="font-bold text-safety-orange">2018</div>
+                        </div>
+                    </div>
+
+                    <div class="flex items-center gap-4 bg-chassis p-4 rounded-xl shadow-card border border-white/40">
+                        <div class="w-12 h-12 bg-recessed rounded-full overflow-hidden border border-white shadow-inner">
+                            <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=100&auto=format&fit=crop" class="w-full h-full object-cover grayscale">
+                        </div>
+                        <div class="flex-1">
+                            <h4 class="font-bold text-ink">Sari Indah</h4>
+                            <p class="text-xs text-ink-muted">Mahasiswa ITB (Informatika)</p>
+                        </div>
+                        <div class="text-right">
+                            <div class="font-mono text-[10px] text-ink-muted uppercase">Batch</div>
+                            <div class="font-bold text-safety-orange">2023</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <button class="mt-6 w-full py-3 border border-ink text-ink font-mono text-xs font-bold uppercase rounded hover:bg-ink hover:text-white transition-colors">
+                    Lihat Direktori Alumni
+                </button>
+            </div>
+        </section>
+
+        <section class="border-t-4 border-ink pt-12">
+            <div class="flex flex-col md:flex-row justify-between items-end mb-12">
+                <div>
+                    <h2 class="font-sans font-black text-4xl text-ink uppercase text-emboss">Fasilitas Sekolah</h2>
+                    <p class="font-mono text-xs text-ink-muted mt-2">INFRASTRUCTURE_VIEWER_V.2.0</p>
+                </div>
+                <div class="flex gap-2 mt-4 md:mt-0">
+                    <div class="px-2 py-1 bg-ink text-white font-mono text-[10px] rounded">CAM_01: ON</div>
+                    <div class="px-2 py-1 bg-ink text-white font-mono text-[10px] rounded">CAM_02: ON</div>
+                    <div class="px-2 py-1 bg-ink text-white font-mono text-[10px] rounded">CAM_03: ON</div>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 bg-[#1a1c20] p-6 rounded-3xl shadow-2xl relative overflow-hidden">
+                <div class="absolute inset-0 opacity-10 bg-grid-pattern pointer-events-none"></div>
+
+                <div class="relative aspect-video bg-black rounded border-2 border-[#333] overflow-hidden group">
+                    <img src="https://images.unsplash.com/photo-1598981493990-33a97bc94219?q=80&w=400&auto=format&fit=crop" class="w-full h-full object-cover opacity-60 group-hover:opacity-100 transition-opacity duration-500 grayscale group-hover:grayscale-0">
+                    <div class="absolute inset-0 bg-scanlines opacity-20 pointer-events-none"></div>
+                    <div class="absolute top-2 left-2 text-[#00ff41] font-mono text-[10px]">LAB_KOMPUTER</div>
+                    <div class="absolute bottom-2 right-2 text-white/50 font-mono text-[10px] group-hover:text-white">STATUS: ACTIVE</div>
+                    <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                        <div class="w-8 h-8 border border-[#00ff41] rounded-full flex items-center justify-center">
+                            <div class="w-1 h-1 bg-[#00ff41]"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="relative aspect-video bg-black rounded border-2 border-[#333] overflow-hidden group">
+                    <img src="https://images.unsplash.com/photo-1562774053-701939374585?q=80&w=400&auto=format&fit=crop" class="w-full h-full object-cover opacity-60 group-hover:opacity-100 transition-opacity duration-500 grayscale group-hover:grayscale-0">
+                    <div class="absolute inset-0 bg-scanlines opacity-20 pointer-events-none"></div>
+                    <div class="absolute top-2 left-2 text-[#00ff41] font-mono text-[10px]">PERPUSTAKAAN</div>
+                    <div class="absolute bottom-2 right-2 text-white/50 font-mono text-[10px] group-hover:text-white">STATUS: QUIET</div>
+                    <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                        <div class="w-8 h-8 border border-[#00ff41] rounded-full flex items-center justify-center">
+                            <div class="w-1 h-1 bg-[#00ff41]"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="relative aspect-video bg-black rounded border-2 border-[#333] overflow-hidden group">
+                    <img src="https://images.unsplash.com/photo-1543326727-25969562479e?q=80&w=400&auto=format&fit=crop" class="w-full h-full object-cover opacity-60 group-hover:opacity-100 transition-opacity duration-500 grayscale group-hover:grayscale-0">
+                    <div class="absolute inset-0 bg-scanlines opacity-20 pointer-events-none"></div>
+                    <div class="absolute top-2 left-2 text-[#00ff41] font-mono text-[10px]">LAPANGAN_BASKET</div>
+                    <div class="absolute bottom-2 right-2 text-white/50 font-mono text-[10px] group-hover:text-white">STATUS: IN_USE</div>
+                    <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                        <div class="w-8 h-8 border border-[#00ff41] rounded-full flex items-center justify-center">
+                            <div class="w-1 h-1 bg-[#00ff41]"></div>
+                        </div>
+                    </div>
+                </div>
+
+                 <div class="relative aspect-video bg-black rounded border-2 border-[#333] overflow-hidden group">
+                    <img src="https://images.unsplash.com/photo-1605656816944-971cd5c1407f?q=80&w=400&auto=format&fit=crop" class="w-full h-full object-cover opacity-60 group-hover:opacity-100 transition-opacity duration-500 grayscale group-hover:grayscale-0">
+                    <div class="absolute inset-0 bg-scanlines opacity-20 pointer-events-none"></div>
+                    <div class="absolute top-2 left-2 text-[#00ff41] font-mono text-[10px]">MASJID_SEKOLAH</div>
+                    <div class="absolute bottom-2 right-2 text-white/50 font-mono text-[10px] group-hover:text-white">STATUS: ACTIVE</div>
+                    <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                        <div class="w-8 h-8 border border-[#00ff41] rounded-full flex items-center justify-center">
+                            <div class="w-1 h-1 bg-[#00ff41]"></div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <script>lucide.createIcons();</script>
+</body>
+</html>
