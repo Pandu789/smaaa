@@ -3,15 +3,58 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SMA MASA DEPAN - Berita & Informasi</title>
     
+    <title>Berita & Informasi Terkini - SMA MASA DEPAN</title>
+    <meta name="description" content="Pusat informasi, berita terkini, prestasi siswa, agenda akademik, dan kegiatan ekstrakurikuler SMA Masa Depan Malang. Update terbaru seputar sekolah.">
+    <meta name="keywords" content="Berita SMA Masa Depan, Info Sekolah Malang, Prestasi Siswa, Agenda Akademik, Blog Pendidikan, Kegiatan OSIS">
+    <meta name="author" content="SMA Masa Depan">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://smamasadepan.sch.id/blog.html">
+
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <meta name="theme-color" content="#e0e5ec">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
     
     <script src="https://unpkg.com/lucide@latest"></script>
-    
     <script src="https://cdn.tailwindcss.com"></script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Blog",
+      "name": "Berita & Informasi SMA Masa Depan",
+      "description": "Kumpulan berita dan artikel terbaru seputar kegiatan akademik dan kesiswaan SMA Masa Depan.",
+      "url": "https://smamasadepan.sch.id/blog.html",
+      "publisher": {
+        "@type": "EducationalOrganization",
+        "name": "SMA Masa Depan",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://smamasadepan.sch.id/logo.png"
+        }
+      },
+      "breadcrumb": {
+        "@type": "BreadcrumbList",
+        "itemListElement": [{
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Beranda",
+          "item": "https://smamasadepan.sch.id/"
+        },{
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Berita",
+          "item": "https://smamasadepan.sch.id/blog.html"
+        }]
+      }
+    }
+    </script>
 
     <script>
         tailwind.config = {
@@ -68,175 +111,148 @@
 
     <div class="noise-overlay"></div>
 
-   <nav class="fixed top-0 w-full z-50 bg-[#e0e5ec]/90 backdrop-blur-md border-b border-white/20 shadow-[0_4px_6px_-1px_rgba(0,0,0,0.1),0_2px_4px_-1px_rgba(0,0,0,0.06)] transition-all duration-300" id="mainNavbar">
-    
-    <div class="hidden lg:flex justify-between items-center px-6 py-1 bg-[#2d3436] text-[10px] font-mono text-gray-400 border-b border-white/5">
-        <div class="flex gap-4">
-            <span><i data-lucide="phone" class="w-3 h-3 inline mr-1"></i> +62 341 123456</span>
-            <span><i data-lucide="mail" class="w-3 h-3 inline mr-1"></i> info@smateknologi.sch.id</span>
-        </div>
-        <div class="flex items-center gap-2">
-            <span class="w-2 h-2 rounded-full bg-[#00ff41] animate-pulse"></span>
-            SYSTEM STATUS: ONLINE
-        </div>
-    </div>
-
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="flex justify-between items-center h-20">
-            
-            <a href="index.html" class="flex items-center gap-3 group">
-                <div class="w-10 h-10 rounded-lg bg-[#e0e5ec] shadow-[4px_4px_8px_#babecc,-4px_-4px_8px_#ffffff] flex items-center justify-center border border-white/50 group-hover:scale-105 transition-transform active:shadow-[inset_4px_4px_8px_#babecc,inset_-4px_-4px_8px_#ffffff]">
-                    <i data-lucide="cpu" class="text-[#2d3436] w-6 h-6 group-hover:text-[#ff4757] transition-colors"></i>
-                </div>
-                <div class="flex flex-col">
-                    <span class="font-sans font-black text-xl text-[#2d3436] leading-none tracking-tight" style="text-shadow: 0 1px 0 #fff;">SMA MASA DEPAN</span>
-                    <span class="font-mono text-[9px] tracking-[0.2em] text-[#ff4757] uppercase font-bold mt-1">INDUSTRIAL SCHOOL</span>
-                </div>
-            </a>
-
-            <div class="hidden lg:flex items-center space-x-1">
-                <a href="index.html" class="nav-link group relative px-4 py-2 rounded-md font-mono text-xs font-bold text-[#4a5568] hover:text-[#2d3436] transition-all">
-                    BERANDA
-                    <span class="absolute bottom-1 left-1/2 -translate-x-1/2 w-1 h-1 bg-[#ff4757] rounded-full opacity-0 group-[.active]:opacity-100 transition-opacity shadow-[0_0_5px_#ff4757]"></span>
-                </a>
-
-                <a href="akademik.html" class="nav-link group relative px-4 py-2 rounded-md font-mono text-xs font-bold text-[#4a5568] hover:text-[#2d3436] transition-all">
-                    AKADEMIK
-                    <span class="absolute bottom-1 left-1/2 -translate-x-1/2 w-1 h-1 bg-[#ff4757] rounded-full opacity-0 group-[.active]:opacity-100 transition-opacity shadow-[0_0_5px_#ff4757]"></span>
-                </a>
-
-                <a href="kesiswaan.html" class="nav-link group relative px-4 py-2 rounded-md font-mono text-xs font-bold text-[#4a5568] hover:text-[#2d3436] transition-all">
-                    KESISWAAN
-                    <span class="absolute bottom-1 left-1/2 -translate-x-1/2 w-1 h-1 bg-[#ff4757] rounded-full opacity-0 group-[.active]:opacity-100 transition-opacity shadow-[0_0_5px_#ff4757]"></span>
-                </a>
-
-                <a href="fasilitas.html" class="nav-link group relative px-4 py-2 rounded-md font-mono text-xs font-bold text-[#4a5568] hover:text-[#2d3436] transition-all">
-                    FASILITAS
-                    <span class="absolute bottom-1 left-1/2 -translate-x-1/2 w-1 h-1 bg-[#ff4757] rounded-full opacity-0 group-[.active]:opacity-100 transition-opacity shadow-[0_0_5px_#ff4757]"></span>
-                </a>
-
-                <a href="galeri.html" class="nav-link group relative px-4 py-2 rounded-md font-mono text-xs font-bold text-[#4a5568] hover:text-[#2d3436] transition-all">
-                    GALERI
-                    <span class="absolute bottom-1 left-1/2 -translate-x-1/2 w-1 h-1 bg-[#ff4757] rounded-full opacity-0 group-[.active]:opacity-100 transition-opacity shadow-[0_0_5px_#ff4757]"></span>
-                </a>
-
-                <a href="blog.html" class="nav-link group relative px-4 py-2 rounded-md font-mono text-xs font-bold text-[#4a5568] hover:text-[#2d3436] transition-all">
-                    BERITA
-                    <span class="absolute bottom-1 left-1/2 -translate-x-1/2 w-1 h-1 bg-[#ff4757] rounded-full opacity-0 group-[.active]:opacity-100 transition-opacity shadow-[0_0_5px_#ff4757]"></span>
-                </a>
-                 
-                <a href="kontak.html" class="nav-link group relative px-4 py-2 rounded-md font-mono text-xs font-bold text-[#4a5568] hover:text-[#2d3436] transition-all">
-                    KONTAK
-                    <span class="absolute bottom-1 left-1/2 -translate-x-1/2 w-1 h-1 bg-[#ff4757] rounded-full opacity-0 group-[.active]:opacity-100 transition-opacity shadow-[0_0_5px_#ff4757]"></span>
-                </a>
-            </div>
-
-            <div class="hidden lg:block ml-4">
-                <a href="ppdb.html" class="group relative inline-flex items-center gap-2 px-6 py-2.5 bg-[#ff4757] text-white font-mono text-xs font-bold uppercase tracking-widest rounded transition-all shadow-[4px_4px_8px_rgba(166,50,60,0.4),-4px_-4px_8px_rgba(255,100,110,0.4)] hover:shadow-[6px_6px_12px_rgba(166,50,60,0.5),-6px_-6px_12px_rgba(255,100,110,0.5)] active:translate-y-[2px] active:shadow-[inset_4px_4px_8px_rgba(0,0,0,0.2)]">
-                    <i data-lucide="log-in" class="w-4 h-4"></i>
-                    PPDB ONLINE
-                </a>
-            </div>
-
-            <div class="flex lg:hidden">
-                <button onclick="toggleMobileMenu()" class="w-12 h-12 rounded-lg bg-[#e0e5ec] shadow-[4px_4px_8px_#babecc,-4px_-4px_8px_#ffffff] flex items-center justify-center text-[#2d3436] active:shadow-[inset_4px_4px_8px_#babecc,inset_-4px_-4px_8px_#ffffff] transition-all">
-                    <i data-lucide="menu" class="w-6 h-6"></i>
-                </button>
-            </div>
-        </div>
-    </div>
-
-    <div id="mobileMenu" class="hidden lg:hidden bg-[#e0e5ec] border-t border-white/20 shadow-inner overflow-hidden transition-all duration-300">
-        <div class="px-4 pt-4 pb-6 space-y-2">
-            
-            <a href="index.html" class="mobile-link block px-4 py-3 rounded-lg text-sm font-bold text-[#4a5568] hover:bg-[#d1d9e6] hover:text-[#ff4757] hover:shadow-[inset_2px_2px_5px_#babecc,inset_-2px_-2px_5px_#ffffff] transition-all flex justify-between items-center">
-                BERANDA <i data-lucide="home" class="w-4 h-4 opacity-50"></i>
-            </a>
-            
-            <a href="akademik.html" class="mobile-link block px-4 py-3 rounded-lg text-sm font-bold text-[#4a5568] hover:bg-[#d1d9e6] hover:text-[#ff4757] hover:shadow-[inset_2px_2px_5px_#babecc,inset_-2px_-2px_5px_#ffffff] transition-all flex justify-between items-center">
-                AKADEMIK <i data-lucide="book-open" class="w-4 h-4 opacity-50"></i>
-            </a>
-            
-            <a href="kesiswaan.html" class="mobile-link block px-4 py-3 rounded-lg text-sm font-bold text-[#4a5568] hover:bg-[#d1d9e6] hover:text-[#ff4757] hover:shadow-[inset_2px_2px_5px_#babecc,inset_-2px_-2px_5px_#ffffff] transition-all flex justify-between items-center">
-                KESISWAAN <i data-lucide="users" class="w-4 h-4 opacity-50"></i>
-            </a>
-            
-            <a href="fasilitas.html" class="mobile-link block px-4 py-3 rounded-lg text-sm font-bold text-[#4a5568] hover:bg-[#d1d9e6] hover:text-[#ff4757] hover:shadow-[inset_2px_2px_5px_#babecc,inset_-2px_-2px_5px_#ffffff] transition-all flex justify-between items-center">
-                FASILITAS <i data-lucide="monitor" class="w-4 h-4 opacity-50"></i>
-            </a>
-            
-            <a href="galeri.html" class="mobile-link block px-4 py-3 rounded-lg text-sm font-bold text-[#4a5568] hover:bg-[#d1d9e6] hover:text-[#ff4757] hover:shadow-[inset_2px_2px_5px_#babecc,inset_-2px_-2px_5px_#ffffff] transition-all flex justify-between items-center">
-                GALERI <i data-lucide="image" class="w-4 h-4 opacity-50"></i>
-            </a>
-
-            <a href="blog.html" class="mobile-link block px-4 py-3 rounded-lg text-sm font-bold text-[#4a5568] hover:bg-[#d1d9e6] hover:text-[#ff4757] hover:shadow-[inset_2px_2px_5px_#babecc,inset_-2px_-2px_5px_#ffffff] transition-all flex justify-between items-center">
-                BERITA <i data-lucide="newspaper" class="w-4 h-4 opacity-50"></i>
-            </a>
-            
-            <a href="kontak.html" class="mobile-link block px-4 py-3 rounded-lg text-sm font-bold text-[#4a5568] hover:bg-[#d1d9e6] hover:text-[#ff4757] hover:shadow-[inset_2px_2px_5px_#babecc,inset_-2px_-2px_5px_#ffffff] transition-all flex justify-between items-center">
-                KONTAK <i data-lucide="phone" class="w-4 h-4 opacity-50"></i>
-            </a>
-
-            <div class="pt-4 border-t border-gray-300">
-                <a href="ppdb.html" class="block w-full py-4 bg-[#ff4757] text-white text-center font-mono font-bold uppercase rounded shadow-[4px_4px_8px_#babecc,-4px_-4px_8px_#ffffff] active:translate-y-1 active:shadow-none">
-                    DAFTAR PPDB SEKARANG
-                </a>
-            </div>
-        </div>
-    </div>
-</nav>
-
-<script>
-    // 1. Highlight Active Link
-    document.addEventListener('DOMContentLoaded', () => {
-        const currentPath = window.location.pathname.split('/').pop() || 'index.html';
+     <nav class="fixed top-0 w-full z-50 bg-[#e0e5ec]/90 backdrop-blur-md border-b border-white/20 shadow-[0_4px_6px_-1px_rgba(0,0,0,0.1),0_2px_4px_-1px_rgba(0,0,0,0.06)] transition-all duration-300" id="mainNavbar">
         
-        // Desktop Links
-        document.querySelectorAll('.nav-link').forEach(link => {
-            if(link.getAttribute('href') === currentPath) {
-                link.classList.add('active'); // Memicu indikator LED
-                link.classList.remove('text-[#4a5568]');
-                link.classList.add('text-[#2d3436]');
-                // Tambahkan efek shadow recessed/tenggelam untuk item aktif
-                link.classList.add('shadow-[inset_2px_2px_4px_#babecc,inset_-2px_-2px_4px_#ffffff]');
-            }
+        <div class="hidden lg:flex justify-between items-center px-6 py-1 bg-[#2d3436] text-[10px] font-mono text-gray-400 border-b border-white/5">
+            <div class="flex gap-4">
+                <span><i data-lucide="phone" class="w-3 h-3 inline mr-1"></i> +62 341 123456</span>
+                <span><i data-lucide="mail" class="w-3 h-3 inline mr-1"></i> info@smateknologi.sch.id</span>
+            </div>
+            <div class="flex items-center gap-2">
+                <span class="w-2 h-2 rounded-full bg-[#00ff41] animate-pulse"></span>
+                SYSTEM STATUS: ONLINE
+            </div>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                
+                <a href="index.html" class="flex items-center gap-3 group" aria-label="Beranda">
+                    <div class="w-10 h-10 rounded-lg bg-[#e0e5ec] shadow-[4px_4px_8px_#babecc,-4px_-4px_8px_#ffffff] flex items-center justify-center border border-white/50 group-hover:scale-105 transition-transform active:shadow-[inset_4px_4px_8px_#babecc,inset_-4px_-4px_8px_#ffffff]">
+                        <i data-lucide="cpu" class="text-[#2d3436] w-6 h-6 group-hover:text-[#ff4757] transition-colors"></i>
+                    </div>
+                    <div class="flex flex-col">
+                        <span class="font-sans font-black text-xl text-[#2d3436] leading-none tracking-tight" style="text-shadow: 0 1px 0 #fff;">SMA MASA DEPAN</span>
+                        <span class="font-mono text-[9px] tracking-[0.2em] text-[#ff4757] uppercase font-bold mt-1">INDUSTRIAL SCHOOL</span>
+                    </div>
+                </a>
+
+                <div class="hidden lg:flex items-center space-x-1">
+                    <a href="index.html" class="nav-link group relative px-4 py-2 rounded-md font-mono text-xs font-bold text-[#4a5568] hover:text-[#2d3436] transition-all">
+                        BERANDA
+                        <span class="absolute bottom-1 left-1/2 -translate-x-1/2 w-1 h-1 bg-[#ff4757] rounded-full opacity-0 group-[.active]:opacity-100 transition-opacity shadow-[0_0_5px_#ff4757]"></span>
+                    </a>
+                    <a href="akademik.html" class="nav-link group relative px-4 py-2 rounded-md font-mono text-xs font-bold text-[#4a5568] hover:text-[#2d3436] transition-all">
+                        AKADEMIK
+                        <span class="absolute bottom-1 left-1/2 -translate-x-1/2 w-1 h-1 bg-[#ff4757] rounded-full opacity-0 group-[.active]:opacity-100 transition-opacity shadow-[0_0_5px_#ff4757]"></span>
+                    </a>
+                    <a href="kesiswaan.html" class="nav-link group relative px-4 py-2 rounded-md font-mono text-xs font-bold text-[#4a5568] hover:text-[#2d3436] transition-all">
+                        KESISWAAN
+                        <span class="absolute bottom-1 left-1/2 -translate-x-1/2 w-1 h-1 bg-[#ff4757] rounded-full opacity-0 group-[.active]:opacity-100 transition-opacity shadow-[0_0_5px_#ff4757]"></span>
+                    </a>
+                    <a href="fasilitas.html" class="nav-link group relative px-4 py-2 rounded-md font-mono text-xs font-bold text-[#4a5568] hover:text-[#2d3436] transition-all">
+                        FASILITAS
+                        <span class="absolute bottom-1 left-1/2 -translate-x-1/2 w-1 h-1 bg-[#ff4757] rounded-full opacity-0 group-[.active]:opacity-100 transition-opacity shadow-[0_0_5px_#ff4757]"></span>
+                    </a>
+                    <a href="galeri.html" class="nav-link group relative px-4 py-2 rounded-md font-mono text-xs font-bold text-[#4a5568] hover:text-[#2d3436] transition-all">
+                        GALERI
+                        <span class="absolute bottom-1 left-1/2 -translate-x-1/2 w-1 h-1 bg-[#ff4757] rounded-full opacity-0 group-[.active]:opacity-100 transition-opacity shadow-[0_0_5px_#ff4757]"></span>
+                    </a>
+                    <a href="blog.html" class="nav-link group relative px-4 py-2 rounded-md font-mono text-xs font-bold text-[#4a5568] hover:text-[#2d3436] transition-all">
+                        BERITA
+                        <span class="absolute bottom-1 left-1/2 -translate-x-1/2 w-1 h-1 bg-[#ff4757] rounded-full opacity-0 group-[.active]:opacity-100 transition-opacity shadow-[0_0_5px_#ff4757]"></span>
+                    </a>
+                    <a href="kontak.html" class="nav-link group relative px-4 py-2 rounded-md font-mono text-xs font-bold text-[#4a5568] hover:text-[#2d3436] transition-all">
+                        KONTAK
+                        <span class="absolute bottom-1 left-1/2 -translate-x-1/2 w-1 h-1 bg-[#ff4757] rounded-full opacity-0 group-[.active]:opacity-100 transition-opacity shadow-[0_0_5px_#ff4757]"></span>
+                    </a>
+                </div>
+
+                <div class="hidden lg:block ml-4">
+                    <a href="ppdb.html" class="group relative inline-flex items-center gap-2 px-6 py-2.5 bg-[#ff4757] text-white font-mono text-xs font-bold uppercase tracking-widest rounded transition-all shadow-[4px_4px_8px_rgba(166,50,60,0.4),-4px_-4px_8px_rgba(255,100,110,0.4)] hover:shadow-[6px_6px_12px_rgba(166,50,60,0.5),-6px_-6px_12px_rgba(255,100,110,0.5)] active:translate-y-[2px] active:shadow-[inset_4px_4px_8px_rgba(0,0,0,0.2)]">
+                        <i data-lucide="log-in" class="w-4 h-4"></i>
+                        PPDB ONLINE
+                    </a>
+                </div>
+
+                <div class="flex lg:hidden">
+                    <button onclick="toggleMobileMenu()" class="w-12 h-12 rounded-lg bg-[#e0e5ec] shadow-[4px_4px_8px_#babecc,-4px_-4px_8px_#ffffff] flex items-center justify-center text-[#2d3436] active:shadow-[inset_4px_4px_8px_#babecc,inset_-4px_-4px_8px_#ffffff] transition-all" aria-label="Menu Mobile">
+                        <i data-lucide="menu" class="w-6 h-6"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div id="mobileMenu" class="hidden lg:hidden bg-[#e0e5ec] border-t border-white/20 shadow-inner overflow-hidden transition-all duration-300">
+            <div class="px-4 pt-4 pb-6 space-y-2">
+                <a href="index.html" class="mobile-link block px-4 py-3 rounded-lg text-sm font-bold text-[#4a5568] hover:bg-[#d1d9e6] hover:text-[#ff4757] hover:shadow-[inset_2px_2px_5px_#babecc,inset_-2px_-2px_5px_#ffffff] transition-all flex justify-between items-center">
+                    BERANDA <i data-lucide="home" class="w-4 h-4 opacity-50"></i>
+                </a>
+                <a href="akademik.html" class="mobile-link block px-4 py-3 rounded-lg text-sm font-bold text-[#4a5568] hover:bg-[#d1d9e6] hover:text-[#ff4757] hover:shadow-[inset_2px_2px_5px_#babecc,inset_-2px_-2px_5px_#ffffff] transition-all flex justify-between items-center">
+                    AKADEMIK <i data-lucide="book-open" class="w-4 h-4 opacity-50"></i>
+                </a>
+                <a href="kesiswaan.html" class="mobile-link block px-4 py-3 rounded-lg text-sm font-bold text-[#4a5568] hover:bg-[#d1d9e6] hover:text-[#ff4757] hover:shadow-[inset_2px_2px_5px_#babecc,inset_-2px_-2px_5px_#ffffff] transition-all flex justify-between items-center">
+                    KESISWAAN <i data-lucide="users" class="w-4 h-4 opacity-50"></i>
+                </a>
+                <a href="fasilitas.html" class="mobile-link block px-4 py-3 rounded-lg text-sm font-bold text-[#4a5568] hover:bg-[#d1d9e6] hover:text-[#ff4757] hover:shadow-[inset_2px_2px_5px_#babecc,inset_-2px_-2px_5px_#ffffff] transition-all flex justify-between items-center">
+                    FASILITAS <i data-lucide="monitor" class="w-4 h-4 opacity-50"></i>
+                </a>
+                <a href="galeri.html" class="mobile-link block px-4 py-3 rounded-lg text-sm font-bold text-[#4a5568] hover:bg-[#d1d9e6] hover:text-[#ff4757] hover:shadow-[inset_2px_2px_5px_#babecc,inset_-2px_-2px_5px_#ffffff] transition-all flex justify-between items-center">
+                    GALERI <i data-lucide="image" class="w-4 h-4 opacity-50"></i>
+                </a>
+                <a href="blog.html" class="mobile-link block px-4 py-3 rounded-lg text-sm font-bold text-[#4a5568] hover:bg-[#d1d9e6] hover:text-[#ff4757] hover:shadow-[inset_2px_2px_5px_#babecc,inset_-2px_-2px_5px_#ffffff] transition-all flex justify-between items-center">
+                    BERITA <i data-lucide="newspaper" class="w-4 h-4 opacity-50"></i>
+                </a>
+                <a href="kontak.html" class="mobile-link block px-4 py-3 rounded-lg text-sm font-bold text-[#4a5568] hover:bg-[#d1d9e6] hover:text-[#ff4757] hover:shadow-[inset_2px_2px_5px_#babecc,inset_-2px_-2px_5px_#ffffff] transition-all flex justify-between items-center">
+                    KONTAK <i data-lucide="phone" class="w-4 h-4 opacity-50"></i>
+                </a>
+                <div class="pt-4 border-t border-gray-300">
+                    <a href="ppdb.html" class="block w-full py-4 bg-[#ff4757] text-white text-center font-mono font-bold uppercase rounded shadow-[4px_4px_8px_#babecc,-4px_-4px_8px_#ffffff] active:translate-y-1 active:shadow-none">
+                        DAFTAR PPDB SEKARANG
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const currentPath = window.location.pathname.split('/').pop() || 'index.html';
+            document.querySelectorAll('.nav-link').forEach(link => {
+                if(link.getAttribute('href') === currentPath) {
+                    link.classList.add('active');
+                    link.classList.remove('text-[#4a5568]');
+                    link.classList.add('text-[#2d3436]');
+                    link.classList.add('shadow-[inset_2px_2px_4px_#babecc,inset_-2px_-2px_4px_#ffffff]');
+                }
+            });
+            document.querySelectorAll('.mobile-link').forEach(link => {
+                if(link.getAttribute('href') === currentPath) {
+                    link.classList.add('text-[#ff4757]', 'bg-[#d1d9e6]', 'shadow-[inset_2px_2px_5px_#babecc,inset_-2px_-2px_5px_#ffffff]');
+                }
+            });
         });
 
-        // Mobile Links
-        document.querySelectorAll('.mobile-link').forEach(link => {
-            if(link.getAttribute('href') === currentPath) {
-                link.classList.add('text-[#ff4757]', 'bg-[#d1d9e6]', 'shadow-[inset_2px_2px_5px_#babecc,inset_-2px_-2px_5px_#ffffff]');
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobileMenu');
+            if (menu.classList.contains('hidden')) {
+                menu.classList.remove('hidden');
+            } else {
+                menu.classList.add('hidden');
+            }
+        }
+
+        window.addEventListener('scroll', () => {
+            const navbar = document.getElementById('mainNavbar');
+            if (window.scrollY > 10) {
+                navbar.classList.add('shadow-lg');
+                navbar.classList.replace('bg-[#e0e5ec]/90', 'bg-[#e0e5ec]/95');
+            } else {
+                navbar.classList.remove('shadow-lg');
+                navbar.classList.replace('bg-[#e0e5ec]/95', 'bg-[#e0e5ec]/90');
             }
         });
-    });
-
-    // 2. Toggle Mobile Menu
-    function toggleMobileMenu() {
-        const menu = document.getElementById('mobileMenu');
-        const icon = document.querySelector('.lg\\:hidden button i');
-        
-        if (menu.classList.contains('hidden')) {
-            menu.classList.remove('hidden');
-            // Ganti icon ke X (close) jika perlu, tapi Lucide perlu re-init
-            // Kita biarkan animasi slide saja
-        } else {
-            menu.classList.add('hidden');
-        }
-    }
-
-    // 3. Navbar Scroll Effect (Optional Glass Strengthening)
-    window.addEventListener('scroll', () => {
-        const navbar = document.getElementById('mainNavbar');
-        if (window.scrollY > 10) {
-            navbar.classList.add('shadow-lg');
-            navbar.classList.replace('bg-[#e0e5ec]/90', 'bg-[#e0e5ec]/95');
-        } else {
-            navbar.classList.remove('shadow-lg');
-            navbar.classList.replace('bg-[#e0e5ec]/95', 'bg-[#e0e5ec]/90');
-        }
-    });
-</script>
-
+    </script>
     <main class="pt-32 pb-24 px-4 md:px-12 max-w-7xl mx-auto space-y-16">
 
         <section>
@@ -250,7 +266,7 @@
                 </p>
             </div>
 
-            <div class="relative bg-[#2d3035] rounded-3xl p-1 shadow-card group hover:-translate-y-1 transition-transform duration-300">
+            <a href="blog-detail.html" class="block relative bg-[#2d3035] rounded-3xl p-1 shadow-card group hover:-translate-y-1 transition-transform duration-300">
                 <div class="absolute -top-3 -right-3 z-20">
                     <div class="bg-safety-orange text-white font-mono font-bold text-xs px-4 py-1 rounded shadow-lg transform rotate-3 border border-white/20">
                         PRIORITY: HIGH
@@ -259,6 +275,8 @@
 
                 <div class="bg-black rounded-2xl overflow-hidden border-4 border-[#1a1c20] relative aspect-[21/9] md:aspect-[21/8]">
                     <img src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?q=80&w=1200&auto=format&fit=crop" 
+                         alt="Penerimaan Peserta Didik Baru (PPDB) SMA Masa Depan"
+                         width="1200" height="600"
                          class="w-full h-full object-cover opacity-60 group-hover:opacity-100 transition-opacity duration-700 grayscale group-hover:grayscale-0">
                     <div class="absolute inset-0 bg-scanlines opacity-20 pointer-events-none"></div>
                     
@@ -275,12 +293,12 @@
                         <p class="font-sans text-gray-300 text-sm md:text-base max-w-3xl mb-6 line-clamp-2">
                             Simak panduan lengkap, persyaratan administrasi, dan jadwal seleksi masuk. Pastikan seluruh dokumen telah terdigitalisasi sebelum mengakses portal pendaftaran.
                         </p>
-                        <a href="#" class="inline-flex items-center gap-2 bg-safety-orange text-white px-6 py-3 rounded font-mono text-xs font-bold uppercase tracking-widest hover:bg-orange-600 transition-colors shadow-lg">
+                        <span class="inline-flex items-center gap-2 bg-safety-orange text-white px-6 py-3 rounded font-mono text-xs font-bold uppercase tracking-widest hover:bg-orange-600 transition-colors shadow-lg">
                             BACA SELENGKAPNYA <i data-lucide="arrow-right" class="w-4 h-4"></i>
-                        </a>
+                        </span>
                     </div>
                 </div>
-            </div>
+            </a>
         </section>
 
         <section class="grid grid-cols-1 lg:grid-cols-12 gap-12">
@@ -340,7 +358,7 @@
     </main>
 
     <script>
-        // --- 1. DATA DATABASE ---
+        // --- 1. DATA DATABASE (With ALT Text for SEO) ---
         const blogPosts = [
             {
                 id: 1,
@@ -348,6 +366,7 @@
                 category: "Prestasi",
                 date: "10 JAN 2026",
                 image: "https://images.unsplash.com/photo-1577896334614-201b31d50dd5?q=80&w=400&auto=format&fit=crop",
+                alt: "Tim Robotik SMA Masa Depan sedang merakit robot",
                 excerpt: "Kompetisi yang berlangsung di Surabaya ini diikuti oleh lebih dari 50 sekolah. Tim SMA Tekno menampilkan robot pemadam api otomatis yang berhasil menyelesaikan misi.",
                 tags: ["Olimpiade", "Robotik", "Juara"]
             },
@@ -357,6 +376,7 @@
                 category: "Kesiswaan",
                 date: "08 JAN 2026",
                 image: "https://images.unsplash.com/photo-1524178232363-1fb2b075b655?q=80&w=400&auto=format&fit=crop",
+                alt: "Suasana workshop digital marketing di kelas",
                 excerpt: "Membekali siswa kelas XII dengan keterampilan pemasaran digital untuk menghadapi dunia kerja di era industri 4.0 bersama Kak Budi (Alumni 2018).",
                 tags: ["Alumni", "Workshop", "Skill"]
             },
@@ -366,6 +386,7 @@
                 category: "Akademik",
                 date: "05 JAN 2026",
                 image: "https://images.unsplash.com/photo-1544717297-fa95b6ee9643?q=80&w=400&auto=format&fit=crop",
+                alt: "Dokumen raport siswa di atas meja",
                 excerpt: "Diberitahukan kepada seluruh wali murid bahwa pengambilan hasil belajar akan dilaksanakan secara bertahap sesuai jadwal yang terlampir.",
                 tags: ["Raport", "Pengumuman"]
             },
@@ -375,6 +396,7 @@
                 category: "Akademik",
                 date: "02 JAN 2026",
                 image: "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?q=80&w=400&auto=format&fit=crop",
+                alt: "Siswa sedang melihat jadwal akademik di papan pengumuman",
                 excerpt: "Unduh jadwal lengkap kegiatan belajar mengajar, libur nasional, dan agenda ujian sekolah semester ini agar persiapan lebih matang.",
                 tags: ["Kalender", "Jadwal"]
             },
@@ -384,6 +406,7 @@
                 category: "Kesiswaan",
                 date: "28 DEC 2025",
                 image: "https://images.unsplash.com/photo-1478131143081-80f7f84ca84d?q=80&w=400&auto=format&fit=crop",
+                alt: "Anggota pramuka sedang berkemah di hutan",
                 excerpt: "Sebanyak 10 siswa terpilih mewakili sekolah dalam ajang Jambore Nasional di Cibubur. Mohon doa restu dari seluruh warga sekolah.",
                 tags: ["Pramuka", "Ekstrakurikuler"]
             },
@@ -393,6 +416,7 @@
                 category: "Teknologi",
                 date: "20 DEC 2025",
                 image: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=400&auto=format&fit=crop",
+                alt: "Antarmuka sistem e-learning di layar laptop",
                 excerpt: "Sistem manajemen pembelajaran kini lebih cepat dan responsif. Fitur baru termasuk absensi wajah dan pengumpulan tugas real-time.",
                 tags: ["IT", "Update", "Fasilitas"]
             }
@@ -419,9 +443,7 @@
 
         // --- 4. RENDER FUNCTIONS ---
 
-        // Render Posts
         function renderPosts() {
-            // Filter Logic
             let filtered = blogPosts.filter(post => {
                 const matchesQuery = post.title.toLowerCase().includes(state.query.toLowerCase()) || 
                                      post.excerpt.toLowerCase().includes(state.query.toLowerCase());
@@ -429,16 +451,13 @@
                 return matchesQuery && matchesCategory;
             });
 
-            // Pagination Logic
             const totalPages = Math.ceil(filtered.length / state.perPage);
             const start = (state.page - 1) * state.perPage;
             const end = start + state.perPage;
             const paginated = filtered.slice(start, end);
 
-            // Clear Container
             postsContainer.innerHTML = "";
 
-            // Empty State
             if (paginated.length === 0) {
                 postsContainer.innerHTML = `
                     <div class="col-span-1 md:col-span-2 flex flex-col items-center justify-center p-12 bg-chassis border-2 border-dashed border-ink/20 rounded-xl text-center">
@@ -453,13 +472,13 @@
                 return;
             }
 
-            // Generate HTML
             paginated.forEach(post => {
+                // Modified: Now wrapped in an Anchor tag pointing to blog-detail.html
                 const html = `
-                    <article class="bg-chassis p-1 rounded-2xl shadow-card group hover:-translate-y-1 transition-transform duration-300">
+                    <a href="blog-detail.html" class="block bg-chassis p-1 rounded-2xl shadow-card group hover:-translate-y-1 transition-transform duration-300">
                         <div class="bg-panel h-full rounded-xl p-5 border border-white/50 flex flex-col relative overflow-hidden">
                             <div class="relative h-48 bg-recessed rounded-lg mb-4 overflow-hidden border border-black/10 shadow-inner">
-                                <img src="${post.image}" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500">
+                                <img src="${post.image}" alt="${post.alt}" loading="lazy" width="400" height="200" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500">
                                 <div class="absolute top-2 right-2 bg-black/60 backdrop-blur-sm text-white px-2 py-0.5 rounded text-[10px] font-mono uppercase">
                                     ${post.category}
                                 </div>
@@ -479,11 +498,11 @@
                                 ${post.excerpt}
                             </p>
                             
-                            <a href="#" class="mt-auto inline-flex items-center gap-2 text-xs font-bold font-mono text-ink uppercase group-hover:gap-3 transition-all">
+                            <div class="mt-auto inline-flex items-center gap-2 text-xs font-bold font-mono text-ink uppercase group-hover:gap-3 transition-all">
                                 Read Log <i data-lucide="chevron-right" class="w-3 h-3 text-safety-orange"></i>
-                            </a>
+                            </div>
                         </div>
-                    </article>
+                    </a>
                 `;
                 postsContainer.innerHTML += html;
             });
@@ -492,14 +511,11 @@
             renderPagination(totalPages);
         }
 
-        // Render Categories
         function renderCategories() {
             categoryList.innerHTML = categories.map(cat => {
                 const isActive = state.category === cat;
                 const activeClass = isActive ? "toggle-active bg-white border-white" : "toggle-inactive bg-recessed hover:bg-gray-300 border-transparent";
-                const indicatorClass = isActive ? "bg-safety-orange shadow-[0_0_8px_#ff4757]" : "bg-recessed shadow-inner";
                 
-                // Count posts per category
                 const count = cat === "Semua" ? blogPosts.length : blogPosts.filter(p => p.category === cat).length;
 
                 return `
@@ -516,7 +532,6 @@
             }).join('');
         }
 
-        // Render Tags
         function renderTags() {
             tagList.innerHTML = allTags.map(tag => `
                 <button onclick="setSearch('${tag}')" class="px-3 py-1 bg-panel border border-white shadow-sm rounded text-[10px] font-mono font-bold text-ink-muted hover:text-safety-orange hover:shadow-md transition-all active:scale-95">
@@ -525,7 +540,6 @@
             `).join('');
         }
 
-        // Render Pagination Numbers
         function renderPagination(totalPages) {
             if (totalPages <= 1) {
                 pageNumbers.innerHTML = `<button class="w-8 h-8 rounded-full bg-safety-orange text-white font-mono font-bold text-xs shadow-md">1</button>`;
@@ -548,14 +562,14 @@
 
         function handleSearch(e) {
             state.query = e.target.value;
-            state.page = 1; // Reset to page 1 on search
+            state.page = 1;
             renderPosts();
         }
 
         function setCategory(cat) {
             state.category = cat;
             state.page = 1;
-            renderCategories(); // Re-render to update toggle visuals
+            renderCategories();
             renderPosts();
         }
 
@@ -567,7 +581,6 @@
         }
 
         function changePage(direction) {
-            // Calculate max pages based on current filter
             let filtered = blogPosts.filter(post => {
                 const matchesQuery = post.title.toLowerCase().includes(state.query.toLowerCase()) || 
                                      post.excerpt.toLowerCase().includes(state.query.toLowerCase());
@@ -580,7 +593,6 @@
             if (newPage > 0 && newPage <= maxPage) {
                 state.page = newPage;
                 renderPosts();
-                // Scroll to top of posts
                 postsContainer.scrollIntoView({ behavior: 'smooth', block: 'start' });
             }
         }
@@ -601,7 +613,6 @@
         // --- 6. INITIALIZATION ---
         searchInput.addEventListener('input', handleSearch);
         
-        // Initial Render
         renderCategories();
         renderTags();
         renderPosts();

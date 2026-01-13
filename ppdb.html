@@ -3,15 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SMA MASA DEPAN - PPDB Online</title>
     
+    <title>PPDB Online SMA Masa Depan - Pendaftaran Siswa Baru 2026</title>
+    <meta name="description" content="Pendaftaran Peserta Didik Baru (PPDB) SMA Masa Depan Tahun Ajaran 2026/2027. Simak syarat, alur pendaftaran, dan jadwal seleksi masuk jalur prestasi & zonasi.">
+    <meta name="keywords" content="PPDB SMA Malang, Daftar SMA Masa Depan, Syarat Masuk SMA, Pendaftaran Siswa Baru 2026, Jalur Prestasi SMA">
+    <meta name="author" content="SMA Masa Depan">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://smamasadepan.sch.id/ppdb.html">
+
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <meta name="theme-color" content="#e0e5ec">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
     
     <script src="https://unpkg.com/lucide@latest"></script>
-    
     <script src="https://cdn.tailwindcss.com"></script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "EducationalOrganization",
+      "name": "SMA Masa Depan",
+      "url": "https://smamasadepan.sch.id",
+      "logo": "https://smamasadepan.sch.id/logo.png",
+      "description": "SMA Masa Depan membuka pendaftaran peserta didik baru tahun ajaran 2026/2027.",
+      "potentialAction": {
+        "@type": "RegisterAction",
+        "target": {
+          "@type": "EntryPoint",
+          "urlTemplate": "https://smamasadepan.sch.id/spmb.html",
+          "actionPlatform": [
+            "http://schema.org/DesktopWebPlatform",
+            "http://schema.org/MobileWebPlatform"
+          ]
+        },
+        "name": "Daftar PPDB Online"
+      }
+    }
+    </script>
 
     <script>
         tailwind.config = {
@@ -54,183 +88,155 @@
         .text-emboss { text-shadow: 0 1px 0 #ffffff; }
         .btn-physical { transition: all 150ms cubic-bezier(0.4, 0, 0.2, 1); }
         .btn-physical:active { transform: translateY(4px); box-shadow: inset 4px 4px 8px #babecc, inset -4px -4px 8px #ffffff !important; border-bottom: 0px solid transparent; }
-        
-        /* Step Connector Animation */
         .step-line { transition: width 1s ease-in-out; }
     </style>
 </head>
 <body class="antialiased overflow-x-hidden selection:bg-safety-orange selection:text-white">
 
     <div class="noise-overlay"></div>
-<nav class="fixed top-0 w-full z-50 bg-[#e0e5ec]/90 backdrop-blur-md border-b border-white/20 shadow-[0_4px_6px_-1px_rgba(0,0,0,0.1),0_2px_4px_-1px_rgba(0,0,0,0.06)] transition-all duration-300" id="mainNavbar">
-    
-    <div class="hidden lg:flex justify-between items-center px-6 py-1 bg-[#2d3436] text-[10px] font-mono text-gray-400 border-b border-white/5">
-        <div class="flex gap-4">
-            <span><i data-lucide="phone" class="w-3 h-3 inline mr-1"></i> +62 341 123456</span>
-            <span><i data-lucide="mail" class="w-3 h-3 inline mr-1"></i> info@smateknologi.sch.id</span>
-        </div>
-        <div class="flex items-center gap-2">
-            <span class="w-2 h-2 rounded-full bg-[#00ff41] animate-pulse"></span>
-            SYSTEM STATUS: ONLINE
-        </div>
-    </div>
 
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="flex justify-between items-center h-20">
-            
-            <a href="index.html" class="flex items-center gap-3 group">
-                <div class="w-10 h-10 rounded-lg bg-[#e0e5ec] shadow-[4px_4px_8px_#babecc,-4px_-4px_8px_#ffffff] flex items-center justify-center border border-white/50 group-hover:scale-105 transition-transform active:shadow-[inset_4px_4px_8px_#babecc,inset_-4px_-4px_8px_#ffffff]">
-                    <i data-lucide="cpu" class="text-[#2d3436] w-6 h-6 group-hover:text-[#ff4757] transition-colors"></i>
-                </div>
-                <div class="flex flex-col">
-                    <span class="font-sans font-black text-xl text-[#2d3436] leading-none tracking-tight" style="text-shadow: 0 1px 0 #fff;">SMA MASA DEPAN</span>
-                    <span class="font-mono text-[9px] tracking-[0.2em] text-[#ff4757] uppercase font-bold mt-1">INDUSTRIAL SCHOOL</span>
-                </div>
-            </a>
-
-            <div class="hidden lg:flex items-center space-x-1">
-                <a href="index.html" class="nav-link group relative px-4 py-2 rounded-md font-mono text-xs font-bold text-[#4a5568] hover:text-[#2d3436] transition-all">
-                    BERANDA
-                    <span class="absolute bottom-1 left-1/2 -translate-x-1/2 w-1 h-1 bg-[#ff4757] rounded-full opacity-0 group-[.active]:opacity-100 transition-opacity shadow-[0_0_5px_#ff4757]"></span>
-                </a>
-
-                <a href="akademik.html" class="nav-link group relative px-4 py-2 rounded-md font-mono text-xs font-bold text-[#4a5568] hover:text-[#2d3436] transition-all">
-                    AKADEMIK
-                    <span class="absolute bottom-1 left-1/2 -translate-x-1/2 w-1 h-1 bg-[#ff4757] rounded-full opacity-0 group-[.active]:opacity-100 transition-opacity shadow-[0_0_5px_#ff4757]"></span>
-                </a>
-
-                <a href="kesiswaan.html" class="nav-link group relative px-4 py-2 rounded-md font-mono text-xs font-bold text-[#4a5568] hover:text-[#2d3436] transition-all">
-                    KESISWAAN
-                    <span class="absolute bottom-1 left-1/2 -translate-x-1/2 w-1 h-1 bg-[#ff4757] rounded-full opacity-0 group-[.active]:opacity-100 transition-opacity shadow-[0_0_5px_#ff4757]"></span>
-                </a>
-
-                <a href="fasilitas.html" class="nav-link group relative px-4 py-2 rounded-md font-mono text-xs font-bold text-[#4a5568] hover:text-[#2d3436] transition-all">
-                    FASILITAS
-                    <span class="absolute bottom-1 left-1/2 -translate-x-1/2 w-1 h-1 bg-[#ff4757] rounded-full opacity-0 group-[.active]:opacity-100 transition-opacity shadow-[0_0_5px_#ff4757]"></span>
-                </a>
-
-                <a href="galeri.html" class="nav-link group relative px-4 py-2 rounded-md font-mono text-xs font-bold text-[#4a5568] hover:text-[#2d3436] transition-all">
-                    GALERI
-                    <span class="absolute bottom-1 left-1/2 -translate-x-1/2 w-1 h-1 bg-[#ff4757] rounded-full opacity-0 group-[.active]:opacity-100 transition-opacity shadow-[0_0_5px_#ff4757]"></span>
-                </a>
-
-                <a href="blog.html" class="nav-link group relative px-4 py-2 rounded-md font-mono text-xs font-bold text-[#4a5568] hover:text-[#2d3436] transition-all">
-                    BERITA
-                    <span class="absolute bottom-1 left-1/2 -translate-x-1/2 w-1 h-1 bg-[#ff4757] rounded-full opacity-0 group-[.active]:opacity-100 transition-opacity shadow-[0_0_5px_#ff4757]"></span>
-                </a>
-                 
-                <a href="kontak.html" class="nav-link group relative px-4 py-2 rounded-md font-mono text-xs font-bold text-[#4a5568] hover:text-[#2d3436] transition-all">
-                    KONTAK
-                    <span class="absolute bottom-1 left-1/2 -translate-x-1/2 w-1 h-1 bg-[#ff4757] rounded-full opacity-0 group-[.active]:opacity-100 transition-opacity shadow-[0_0_5px_#ff4757]"></span>
-                </a>
-            </div>
-
-            <div class="hidden lg:block ml-4">
-                <a href="ppdb.html" class="group relative inline-flex items-center gap-2 px-6 py-2.5 bg-[#ff4757] text-white font-mono text-xs font-bold uppercase tracking-widest rounded transition-all shadow-[4px_4px_8px_rgba(166,50,60,0.4),-4px_-4px_8px_rgba(255,100,110,0.4)] hover:shadow-[6px_6px_12px_rgba(166,50,60,0.5),-6px_-6px_12px_rgba(255,100,110,0.5)] active:translate-y-[2px] active:shadow-[inset_4px_4px_8px_rgba(0,0,0,0.2)]">
-                    <i data-lucide="log-in" class="w-4 h-4"></i>
-                    PPDB ONLINE
-                </a>
-            </div>
-
-            <div class="flex lg:hidden">
-                <button onclick="toggleMobileMenu()" class="w-12 h-12 rounded-lg bg-[#e0e5ec] shadow-[4px_4px_8px_#babecc,-4px_-4px_8px_#ffffff] flex items-center justify-center text-[#2d3436] active:shadow-[inset_4px_4px_8px_#babecc,inset_-4px_-4px_8px_#ffffff] transition-all">
-                    <i data-lucide="menu" class="w-6 h-6"></i>
-                </button>
-            </div>
-        </div>
-    </div>
-
-    <div id="mobileMenu" class="hidden lg:hidden bg-[#e0e5ec] border-t border-white/20 shadow-inner overflow-hidden transition-all duration-300">
-        <div class="px-4 pt-4 pb-6 space-y-2">
-            
-            <a href="index.html" class="mobile-link block px-4 py-3 rounded-lg text-sm font-bold text-[#4a5568] hover:bg-[#d1d9e6] hover:text-[#ff4757] hover:shadow-[inset_2px_2px_5px_#babecc,inset_-2px_-2px_5px_#ffffff] transition-all flex justify-between items-center">
-                BERANDA <i data-lucide="home" class="w-4 h-4 opacity-50"></i>
-            </a>
-            
-            <a href="akademik.html" class="mobile-link block px-4 py-3 rounded-lg text-sm font-bold text-[#4a5568] hover:bg-[#d1d9e6] hover:text-[#ff4757] hover:shadow-[inset_2px_2px_5px_#babecc,inset_-2px_-2px_5px_#ffffff] transition-all flex justify-between items-center">
-                AKADEMIK <i data-lucide="book-open" class="w-4 h-4 opacity-50"></i>
-            </a>
-            
-            <a href="kesiswaan.html" class="mobile-link block px-4 py-3 rounded-lg text-sm font-bold text-[#4a5568] hover:bg-[#d1d9e6] hover:text-[#ff4757] hover:shadow-[inset_2px_2px_5px_#babecc,inset_-2px_-2px_5px_#ffffff] transition-all flex justify-between items-center">
-                KESISWAAN <i data-lucide="users" class="w-4 h-4 opacity-50"></i>
-            </a>
-            
-            <a href="fasilitas.html" class="mobile-link block px-4 py-3 rounded-lg text-sm font-bold text-[#4a5568] hover:bg-[#d1d9e6] hover:text-[#ff4757] hover:shadow-[inset_2px_2px_5px_#babecc,inset_-2px_-2px_5px_#ffffff] transition-all flex justify-between items-center">
-                FASILITAS <i data-lucide="monitor" class="w-4 h-4 opacity-50"></i>
-            </a>
-            
-            <a href="galeri.html" class="mobile-link block px-4 py-3 rounded-lg text-sm font-bold text-[#4a5568] hover:bg-[#d1d9e6] hover:text-[#ff4757] hover:shadow-[inset_2px_2px_5px_#babecc,inset_-2px_-2px_5px_#ffffff] transition-all flex justify-between items-center">
-                GALERI <i data-lucide="image" class="w-4 h-4 opacity-50"></i>
-            </a>
-
-            <a href="blog.html" class="mobile-link block px-4 py-3 rounded-lg text-sm font-bold text-[#4a5568] hover:bg-[#d1d9e6] hover:text-[#ff4757] hover:shadow-[inset_2px_2px_5px_#babecc,inset_-2px_-2px_5px_#ffffff] transition-all flex justify-between items-center">
-                BERITA <i data-lucide="newspaper" class="w-4 h-4 opacity-50"></i>
-            </a>
-            
-            <a href="kontak.html" class="mobile-link block px-4 py-3 rounded-lg text-sm font-bold text-[#4a5568] hover:bg-[#d1d9e6] hover:text-[#ff4757] hover:shadow-[inset_2px_2px_5px_#babecc,inset_-2px_-2px_5px_#ffffff] transition-all flex justify-between items-center">
-                KONTAK <i data-lucide="phone" class="w-4 h-4 opacity-50"></i>
-            </a>
-
-            <div class="pt-4 border-t border-gray-300">
-                <a href="ppdb.html" class="block w-full py-4 bg-[#ff4757] text-white text-center font-mono font-bold uppercase rounded shadow-[4px_4px_8px_#babecc,-4px_-4px_8px_#ffffff] active:translate-y-1 active:shadow-none">
-                    DAFTAR PPDB SEKARANG
-                </a>
-            </div>
-        </div>
-    </div>
-</nav>
-
-<script>
-    // 1. Highlight Active Link
-    document.addEventListener('DOMContentLoaded', () => {
-        const currentPath = window.location.pathname.split('/').pop() || 'index.html';
+   <nav class="fixed top-0 w-full z-50 bg-[#e0e5ec]/90 backdrop-blur-md border-b border-white/20 shadow-[0_4px_6px_-1px_rgba(0,0,0,0.1),0_2px_4px_-1px_rgba(0,0,0,0.06)] transition-all duration-300" id="mainNavbar">
         
-        // Desktop Links
-        document.querySelectorAll('.nav-link').forEach(link => {
-            if(link.getAttribute('href') === currentPath) {
-                link.classList.add('active'); // Memicu indikator LED
-                link.classList.remove('text-[#4a5568]');
-                link.classList.add('text-[#2d3436]');
-                // Tambahkan efek shadow recessed/tenggelam untuk item aktif
-                link.classList.add('shadow-[inset_2px_2px_4px_#babecc,inset_-2px_-2px_4px_#ffffff]');
-            }
+        <div class="hidden lg:flex justify-between items-center px-6 py-1 bg-[#2d3436] text-[10px] font-mono text-gray-400 border-b border-white/5">
+            <div class="flex gap-4">
+                <span><i data-lucide="phone" class="w-3 h-3 inline mr-1"></i> +62 341 123456</span>
+                <span><i data-lucide="mail" class="w-3 h-3 inline mr-1"></i> info@smateknologi.sch.id</span>
+            </div>
+            <div class="flex items-center gap-2">
+                <span class="w-2 h-2 rounded-full bg-[#00ff41] animate-pulse"></span>
+                SYSTEM STATUS: ONLINE
+            </div>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                
+                <a href="index.html" class="flex items-center gap-3 group" aria-label="Beranda">
+                    <div class="w-10 h-10 rounded-lg bg-[#e0e5ec] shadow-[4px_4px_8px_#babecc,-4px_-4px_8px_#ffffff] flex items-center justify-center border border-white/50 group-hover:scale-105 transition-transform active:shadow-[inset_4px_4px_8px_#babecc,inset_-4px_-4px_8px_#ffffff]">
+                        <i data-lucide="cpu" class="text-[#2d3436] w-6 h-6 group-hover:text-[#ff4757] transition-colors"></i>
+                    </div>
+                    <div class="flex flex-col">
+                        <span class="font-sans font-black text-xl text-[#2d3436] leading-none tracking-tight" style="text-shadow: 0 1px 0 #fff;">SMA MASA DEPAN</span>
+                        <span class="font-mono text-[9px] tracking-[0.2em] text-[#ff4757] uppercase font-bold mt-1">INDUSTRIAL SCHOOL</span>
+                    </div>
+                </a>
+
+                <div class="hidden lg:flex items-center space-x-1">
+                    <a href="index.html" class="nav-link group relative px-4 py-2 rounded-md font-mono text-xs font-bold text-[#4a5568] hover:text-[#2d3436] transition-all">
+                        BERANDA
+                        <span class="absolute bottom-1 left-1/2 -translate-x-1/2 w-1 h-1 bg-[#ff4757] rounded-full opacity-0 group-[.active]:opacity-100 transition-opacity shadow-[0_0_5px_#ff4757]"></span>
+                    </a>
+                    <a href="akademik.html" class="nav-link group relative px-4 py-2 rounded-md font-mono text-xs font-bold text-[#4a5568] hover:text-[#2d3436] transition-all">
+                        AKADEMIK
+                        <span class="absolute bottom-1 left-1/2 -translate-x-1/2 w-1 h-1 bg-[#ff4757] rounded-full opacity-0 group-[.active]:opacity-100 transition-opacity shadow-[0_0_5px_#ff4757]"></span>
+                    </a>
+                    <a href="kesiswaan.html" class="nav-link group relative px-4 py-2 rounded-md font-mono text-xs font-bold text-[#4a5568] hover:text-[#2d3436] transition-all">
+                        KESISWAAN
+                        <span class="absolute bottom-1 left-1/2 -translate-x-1/2 w-1 h-1 bg-[#ff4757] rounded-full opacity-0 group-[.active]:opacity-100 transition-opacity shadow-[0_0_5px_#ff4757]"></span>
+                    </a>
+                    <a href="fasilitas.html" class="nav-link group relative px-4 py-2 rounded-md font-mono text-xs font-bold text-[#4a5568] hover:text-[#2d3436] transition-all">
+                        FASILITAS
+                        <span class="absolute bottom-1 left-1/2 -translate-x-1/2 w-1 h-1 bg-[#ff4757] rounded-full opacity-0 group-[.active]:opacity-100 transition-opacity shadow-[0_0_5px_#ff4757]"></span>
+                    </a>
+                    <a href="galeri.html" class="nav-link group relative px-4 py-2 rounded-md font-mono text-xs font-bold text-[#4a5568] hover:text-[#2d3436] transition-all">
+                        GALERI
+                        <span class="absolute bottom-1 left-1/2 -translate-x-1/2 w-1 h-1 bg-[#ff4757] rounded-full opacity-0 group-[.active]:opacity-100 transition-opacity shadow-[0_0_5px_#ff4757]"></span>
+                    </a>
+                    <a href="blog.html" class="nav-link group relative px-4 py-2 rounded-md font-mono text-xs font-bold text-[#4a5568] hover:text-[#2d3436] transition-all">
+                        BERITA
+                        <span class="absolute bottom-1 left-1/2 -translate-x-1/2 w-1 h-1 bg-[#ff4757] rounded-full opacity-0 group-[.active]:opacity-100 transition-opacity shadow-[0_0_5px_#ff4757]"></span>
+                    </a>
+                    <a href="kontak.html" class="nav-link group relative px-4 py-2 rounded-md font-mono text-xs font-bold text-[#4a5568] hover:text-[#2d3436] transition-all">
+                        KONTAK
+                        <span class="absolute bottom-1 left-1/2 -translate-x-1/2 w-1 h-1 bg-[#ff4757] rounded-full opacity-0 group-[.active]:opacity-100 transition-opacity shadow-[0_0_5px_#ff4757]"></span>
+                    </a>
+                </div>
+
+                <div class="hidden lg:block ml-4">
+                    <a href="ppdb.html" class="group relative inline-flex items-center gap-2 px-6 py-2.5 bg-[#ff4757] text-white font-mono text-xs font-bold uppercase tracking-widest rounded transition-all shadow-[4px_4px_8px_rgba(166,50,60,0.4),-4px_-4px_8px_rgba(255,100,110,0.4)] hover:shadow-[6px_6px_12px_rgba(166,50,60,0.5),-6px_-6px_12px_rgba(255,100,110,0.5)] active:translate-y-[2px] active:shadow-[inset_4px_4px_8px_rgba(0,0,0,0.2)]">
+                        <i data-lucide="log-in" class="w-4 h-4"></i>
+                        PPDB ONLINE
+                    </a>
+                </div>
+
+                <div class="flex lg:hidden">
+                    <button onclick="toggleMobileMenu()" class="w-12 h-12 rounded-lg bg-[#e0e5ec] shadow-[4px_4px_8px_#babecc,-4px_-4px_8px_#ffffff] flex items-center justify-center text-[#2d3436] active:shadow-[inset_4px_4px_8px_#babecc,inset_-4px_-4px_8px_#ffffff] transition-all" aria-label="Menu Mobile">
+                        <i data-lucide="menu" class="w-6 h-6"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div id="mobileMenu" class="hidden lg:hidden bg-[#e0e5ec] border-t border-white/20 shadow-inner overflow-hidden transition-all duration-300">
+            <div class="px-4 pt-4 pb-6 space-y-2">
+                <a href="index.html" class="mobile-link block px-4 py-3 rounded-lg text-sm font-bold text-[#4a5568] hover:bg-[#d1d9e6] hover:text-[#ff4757] hover:shadow-[inset_2px_2px_5px_#babecc,inset_-2px_-2px_5px_#ffffff] transition-all flex justify-between items-center">
+                    BERANDA <i data-lucide="home" class="w-4 h-4 opacity-50"></i>
+                </a>
+                <a href="akademik.html" class="mobile-link block px-4 py-3 rounded-lg text-sm font-bold text-[#4a5568] hover:bg-[#d1d9e6] hover:text-[#ff4757] hover:shadow-[inset_2px_2px_5px_#babecc,inset_-2px_-2px_5px_#ffffff] transition-all flex justify-between items-center">
+                    AKADEMIK <i data-lucide="book-open" class="w-4 h-4 opacity-50"></i>
+                </a>
+                <a href="kesiswaan.html" class="mobile-link block px-4 py-3 rounded-lg text-sm font-bold text-[#4a5568] hover:bg-[#d1d9e6] hover:text-[#ff4757] hover:shadow-[inset_2px_2px_5px_#babecc,inset_-2px_-2px_5px_#ffffff] transition-all flex justify-between items-center">
+                    KESISWAAN <i data-lucide="users" class="w-4 h-4 opacity-50"></i>
+                </a>
+                <a href="fasilitas.html" class="mobile-link block px-4 py-3 rounded-lg text-sm font-bold text-[#4a5568] hover:bg-[#d1d9e6] hover:text-[#ff4757] hover:shadow-[inset_2px_2px_5px_#babecc,inset_-2px_-2px_5px_#ffffff] transition-all flex justify-between items-center">
+                    FASILITAS <i data-lucide="monitor" class="w-4 h-4 opacity-50"></i>
+                </a>
+                <a href="galeri.html" class="mobile-link block px-4 py-3 rounded-lg text-sm font-bold text-[#4a5568] hover:bg-[#d1d9e6] hover:text-[#ff4757] hover:shadow-[inset_2px_2px_5px_#babecc,inset_-2px_-2px_5px_#ffffff] transition-all flex justify-between items-center">
+                    GALERI <i data-lucide="image" class="w-4 h-4 opacity-50"></i>
+                </a>
+                <a href="blog.html" class="mobile-link block px-4 py-3 rounded-lg text-sm font-bold text-[#4a5568] hover:bg-[#d1d9e6] hover:text-[#ff4757] hover:shadow-[inset_2px_2px_5px_#babecc,inset_-2px_-2px_5px_#ffffff] transition-all flex justify-between items-center">
+                    BERITA <i data-lucide="newspaper" class="w-4 h-4 opacity-50"></i>
+                </a>
+                <a href="kontak.html" class="mobile-link block px-4 py-3 rounded-lg text-sm font-bold text-[#4a5568] hover:bg-[#d1d9e6] hover:text-[#ff4757] hover:shadow-[inset_2px_2px_5px_#babecc,inset_-2px_-2px_5px_#ffffff] transition-all flex justify-between items-center">
+                    KONTAK <i data-lucide="phone" class="w-4 h-4 opacity-50"></i>
+                </a>
+                <div class="pt-4 border-t border-gray-300">
+                    <a href="ppdb.html" class="block w-full py-4 bg-[#ff4757] text-white text-center font-mono font-bold uppercase rounded shadow-[4px_4px_8px_#babecc,-4px_-4px_8px_#ffffff] active:translate-y-1 active:shadow-none">
+                        DAFTAR PPDB SEKARANG
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const currentPath = window.location.pathname.split('/').pop() || 'index.html';
+            document.querySelectorAll('.nav-link').forEach(link => {
+                if(link.getAttribute('href') === currentPath) {
+                    link.classList.add('active');
+                    link.classList.remove('text-[#4a5568]');
+                    link.classList.add('text-[#2d3436]');
+                    link.classList.add('shadow-[inset_2px_2px_4px_#babecc,inset_-2px_-2px_4px_#ffffff]');
+                }
+            });
+            document.querySelectorAll('.mobile-link').forEach(link => {
+                if(link.getAttribute('href') === currentPath) {
+                    link.classList.add('text-[#ff4757]', 'bg-[#d1d9e6]', 'shadow-[inset_2px_2px_5px_#babecc,inset_-2px_-2px_5px_#ffffff]');
+                }
+            });
         });
 
-        // Mobile Links
-        document.querySelectorAll('.mobile-link').forEach(link => {
-            if(link.getAttribute('href') === currentPath) {
-                link.classList.add('text-[#ff4757]', 'bg-[#d1d9e6]', 'shadow-[inset_2px_2px_5px_#babecc,inset_-2px_-2px_5px_#ffffff]');
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobileMenu');
+            if (menu.classList.contains('hidden')) {
+                menu.classList.remove('hidden');
+            } else {
+                menu.classList.add('hidden');
+            }
+        }
+
+        window.addEventListener('scroll', () => {
+            const navbar = document.getElementById('mainNavbar');
+            if (window.scrollY > 10) {
+                navbar.classList.add('shadow-lg');
+                navbar.classList.replace('bg-[#e0e5ec]/90', 'bg-[#e0e5ec]/95');
+            } else {
+                navbar.classList.remove('shadow-lg');
+                navbar.classList.replace('bg-[#e0e5ec]/95', 'bg-[#e0e5ec]/90');
             }
         });
-    });
-
-    // 2. Toggle Mobile Menu
-    function toggleMobileMenu() {
-        const menu = document.getElementById('mobileMenu');
-        const icon = document.querySelector('.lg\\:hidden button i');
-        
-        if (menu.classList.contains('hidden')) {
-            menu.classList.remove('hidden');
-            // Ganti icon ke X (close) jika perlu, tapi Lucide perlu re-init
-            // Kita biarkan animasi slide saja
-        } else {
-            menu.classList.add('hidden');
-        }
-    }
-
-    // 3. Navbar Scroll Effect (Optional Glass Strengthening)
-    window.addEventListener('scroll', () => {
-        const navbar = document.getElementById('mainNavbar');
-        if (window.scrollY > 10) {
-            navbar.classList.add('shadow-lg');
-            navbar.classList.replace('bg-[#e0e5ec]/90', 'bg-[#e0e5ec]/95');
-        } else {
-            navbar.classList.remove('shadow-lg');
-            navbar.classList.replace('bg-[#e0e5ec]/95', 'bg-[#e0e5ec]/90');
-        }
-    });
-</script>
-
+    </script>
     <main class="pt-32 pb-24 px-4 md:px-12 max-w-7xl mx-auto space-y-24">
 
         <section class="relative bg-[#2d3035] rounded-3xl p-8 md:p-12 shadow-card border-4 border-[#1a1c20] overflow-hidden group">
@@ -339,7 +345,8 @@
 
             <div class="relative max-w-5xl mx-auto">
                 <div class="hidden md:block absolute top-1/2 left-0 w-full h-2 bg-recessed -translate-y-1/2 rounded-full shadow-inner z-0">
-                    <div class="w-1/2 h-full bg-safety-orange rounded-full"></div> </div>
+                    <div class="w-1/2 h-full bg-safety-orange rounded-full"></div>
+                </div>
 
                 <div class="grid grid-cols-1 md:grid-cols-4 gap-8 relative z-10">
                     
