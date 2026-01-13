@@ -4,12 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <title>Berita & Informasi Terkini - SMA MASA DEPAN</title>
-    <meta name="description" content="Pusat informasi, berita terkini, prestasi siswa, agenda akademik, dan kegiatan ekstrakurikuler SMA Masa Depan Malang. Update terbaru seputar sekolah.">
-    <meta name="keywords" content="Berita SMA Masa Depan, Info Sekolah Malang, Prestasi Siswa, Agenda Akademik, Blog Pendidikan, Kegiatan OSIS">
+    <title>SMA MASA DEPAN - Galeri Visual</title>
+    <meta name="description" content="Dokumentasi visual kegiatan akademik, ekstrakurikuler, dan fasilitas SMA Masa Depan Malang. Lihat galeri foto kegiatan siswa dan sarana sekolah.">
+    <meta name="keywords" content="Galeri SMA Masa Depan, Foto Sekolah Malang, Kegiatan Siswa, Fasilitas Sekolah, Dokumentasi SMA">
     <meta name="author" content="SMA Masa Depan">
     <meta name="robots" content="index, follow">
-    <link rel="canonical" href="https://smamasadepan.sch.id/blog.html">
+    <link rel="canonical" href="https://smamasadepan.sch.id/galeri.html">
 
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -27,17 +27,13 @@
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "Blog",
-      "name": "Berita & Informasi SMA Masa Depan",
-      "description": "Kumpulan berita dan artikel terbaru seputar kegiatan akademik dan kesiswaan SMA Masa Depan.",
-      "url": "https://smamasadepan.sch.id/blog.html",
-      "publisher": {
+      "@type": "ImageGallery",
+      "name": "Galeri SMA Masa Depan",
+      "description": "Koleksi foto kegiatan dan fasilitas SMA Masa Depan.",
+      "url": "https://smamasadepan.sch.id/galeri.html",
+      "author": {
         "@type": "EducationalOrganization",
-        "name": "SMA Masa Depan",
-        "logo": {
-          "@type": "ImageObject",
-          "url": "https://smamasadepan.sch.id/logo.png"
-        }
+        "name": "SMA Masa Depan"
       },
       "breadcrumb": {
         "@type": "BreadcrumbList",
@@ -49,8 +45,8 @@
         },{
           "@type": "ListItem",
           "position": 2,
-          "name": "Berita",
-          "item": "https://smamasadepan.sch.id/blog.html"
+          "name": "Galeri",
+          "item": "https://smamasadepan.sch.id/galeri.html"
         }]
       }
     }
@@ -76,6 +72,7 @@
                         'floating': '12px 12px 24px #babecc, -12px -12px 24px #ffffff, inset 1px 1px 0 rgba(255,255,255,0.5)',
                         'pressed': 'inset 6px 6px 12px #babecc, inset -6px -6px 12px #ffffff',
                         'recessed': 'inset 4px 4px 8px #babecc, inset -4px -4px 8px #ffffff',
+                        'monitor': '0 0 50px rgba(0,0,0,0.5)',
                     },
                     backgroundImage: {
                         'scanlines': 'linear-gradient(rgba(18,16,16,0) 50%, rgba(0,0,0,0.25) 50%)',
@@ -93,421 +90,424 @@
             mix-blend-mode: overlay;
         }
         .text-emboss { text-shadow: 0 1px 0 #ffffff; }
-        .btn-physical { transition: all 150ms; }
-        .btn-physical:active { transform: translateY(2px); box-shadow: inset 6px 6px 12px #babecc, inset -6px -6px 12px #ffffff !important; }
-        .line-clamp-3 {
-            display: -webkit-box;
-            -webkit-line-clamp: 3;
-            -webkit-box-orient: vertical;
-            overflow: hidden;
+        
+        /* Animation Classes */
+        .fade-in { animation: fadeIn 0.5s ease-out forwards; }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: scale(0.95); }
+            to { opacity: 1; transform: scale(1); }
         }
-        /* Active State for Directory Toggle */
-        .toggle-active .indicator { background-color: #ff4757; }
-        .toggle-inactive .indicator { background-color: #d1d9e6; }
-        .toggle-active span { color: #2d3436; font-weight: 700; }
+        
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #e0e5ec; }
+        ::-webkit-scrollbar-thumb { background: #babecc; border-radius: 4px; }
     </style>
 </head>
 <body class="antialiased overflow-x-hidden selection:bg-safety-orange selection:text-white">
 
     <div class="noise-overlay"></div>
 
-     <nav class="fixed top-0 w-full z-50 bg-[#e0e5ec]/90 backdrop-blur-md border-b border-white/20 shadow-[0_4px_6px_-1px_rgba(0,0,0,0.1),0_2px_4px_-1px_rgba(0,0,0,0.06)] transition-all duration-300" id="mainNavbar">
-        
-        <div class="hidden lg:flex justify-between items-center px-6 py-1 bg-[#2d3436] text-[10px] font-mono text-gray-400 border-b border-white/5">
-            <div class="flex gap-4">
-                <span><i data-lucide="phone" class="w-3 h-3 inline mr-1"></i> +62 341 123456</span>
-                <span><i data-lucide="mail" class="w-3 h-3 inline mr-1"></i> info@smateknologi.sch.id</span>
-            </div>
-            <div class="flex items-center gap-2">
-                <span class="w-2 h-2 rounded-full bg-[#00ff41] animate-pulse"></span>
-                SYSTEM STATUS: ONLINE
-            </div>
+  <nav class="fixed top-0 w-full z-50 bg-[#e0e5ec]/90 backdrop-blur-md border-b border-white/20 shadow-[0_4px_6px_-1px_rgba(0,0,0,0.1),0_2px_4px_-1px_rgba(0,0,0,0.06)] transition-all duration-300" id="mainNavbar">
+    
+    <div class="hidden lg:flex justify-between items-center px-6 py-1 bg-[#2d3436] text-[10px] font-mono text-gray-400 border-b border-white/5">
+        <div class="flex gap-4">
+            <span><i data-lucide="phone" class="w-3 h-3 inline mr-1"></i> +62 341 123456</span>
+            <span><i data-lucide="mail" class="w-3 h-3 inline mr-1"></i> info@smateknologi.sch.id</span>
         </div>
+        <div class="flex items-center gap-2">
+            <span class="w-2 h-2 rounded-full bg-[#00ff41] animate-pulse"></span>
+            SYSTEM STATUS: ONLINE
+        </div>
+    </div>
 
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center h-20">
-                
-                <a href="index.html" class="flex items-center gap-3 group">
-                    <div class="w-10 h-10 rounded-lg bg-[#e0e5ec] shadow-[4px_4px_8px_#babecc,-4px_-4px_8px_#ffffff] flex items-center justify-center border border-white/50 group-hover:scale-105 transition-transform active:shadow-[inset_4px_4px_8px_#babecc,inset_-4px_-4px_8px_#ffffff]">
-                        <i data-lucide="arrow-left" class="text-[#2d3436] w-6 h-6"></i>
-                    </div>
-                    <div class="flex flex-col">
-                        <span class="font-sans font-black text-lg text-[#2d3436] text-emboss uppercase">BERITA</span>
-                        <span class="font-mono text-[10px] tracking-widest text-[#ff4757] uppercase">SYSTEM_LOGS</span>
-                    </div>
-                </a>
-                <div class="hidden md:flex gap-4">
-                    <span class="font-mono text-xs text-[#4a5568] self-center">ARCHIVE_ACCESS: GRANTED</span>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center h-20">
+            
+            <a href="index.html" class="flex items-center gap-3 group">
+                <div class="w-10 h-10 rounded-lg bg-[#e0e5ec] shadow-[4px_4px_8px_#babecc,-4px_-4px_8px_#ffffff] flex items-center justify-center border border-white/50 group-hover:scale-105 transition-transform active:shadow-[inset_4px_4px_8px_#babecc,inset_-4px_-4px_8px_#ffffff]">
+                    <i data-lucide="cpu" class="text-[#2d3436] w-6 h-6 group-hover:text-[#ff4757] transition-colors"></i>
                 </div>
+                <div class="flex flex-col">
+                    <span class="font-sans font-black text-xl text-[#2d3436] leading-none tracking-tight" style="text-shadow: 0 1px 0 #fff;">SMA MASA DEPAN</span>
+                    <span class="font-mono text-[9px] tracking-[0.2em] text-[#ff4757] uppercase font-bold mt-1">INDUSTRIAL SCHOOL</span>
+                </div>
+            </a>
+
+            <div class="hidden lg:flex items-center space-x-1">
+                <a href="index.html" class="nav-link group relative px-4 py-2 rounded-md font-mono text-xs font-bold text-[#4a5568] hover:text-[#2d3436] transition-all">
+                    BERANDA
+                    <span class="absolute bottom-1 left-1/2 -translate-x-1/2 w-1 h-1 bg-[#ff4757] rounded-full opacity-0 group-[.active]:opacity-100 transition-opacity shadow-[0_0_5px_#ff4757]"></span>
+                </a>
+
+                <a href="akademik.html" class="nav-link group relative px-4 py-2 rounded-md font-mono text-xs font-bold text-[#4a5568] hover:text-[#2d3436] transition-all">
+                    AKADEMIK
+                    <span class="absolute bottom-1 left-1/2 -translate-x-1/2 w-1 h-1 bg-[#ff4757] rounded-full opacity-0 group-[.active]:opacity-100 transition-opacity shadow-[0_0_5px_#ff4757]"></span>
+                </a>
+
+                <a href="kesiswaan.html" class="nav-link group relative px-4 py-2 rounded-md font-mono text-xs font-bold text-[#4a5568] hover:text-[#2d3436] transition-all">
+                    KESISWAAN
+                    <span class="absolute bottom-1 left-1/2 -translate-x-1/2 w-1 h-1 bg-[#ff4757] rounded-full opacity-0 group-[.active]:opacity-100 transition-opacity shadow-[0_0_5px_#ff4757]"></span>
+                </a>
+
+                <a href="fasilitas.html" class="nav-link group relative px-4 py-2 rounded-md font-mono text-xs font-bold text-[#4a5568] hover:text-[#2d3436] transition-all">
+                    FASILITAS
+                    <span class="absolute bottom-1 left-1/2 -translate-x-1/2 w-1 h-1 bg-[#ff4757] rounded-full opacity-0 group-[.active]:opacity-100 transition-opacity shadow-[0_0_5px_#ff4757]"></span>
+                </a>
+
+                <a href="galeri.html" class="nav-link group relative px-4 py-2 rounded-md font-mono text-xs font-bold text-[#4a5568] hover:text-[#2d3436] transition-all">
+                    GALERI
+                    <span class="absolute bottom-1 left-1/2 -translate-x-1/2 w-1 h-1 bg-[#ff4757] rounded-full opacity-0 group-[.active]:opacity-100 transition-opacity shadow-[0_0_5px_#ff4757]"></span>
+                </a>
+
+                <a href="blog.html" class="nav-link group relative px-4 py-2 rounded-md font-mono text-xs font-bold text-[#4a5568] hover:text-[#2d3436] transition-all">
+                    BERITA
+                    <span class="absolute bottom-1 left-1/2 -translate-x-1/2 w-1 h-1 bg-[#ff4757] rounded-full opacity-0 group-[.active]:opacity-100 transition-opacity shadow-[0_0_5px_#ff4757]"></span>
+                </a>
+                
+                <a href="kontak.html" class="nav-link group relative px-4 py-2 rounded-md font-mono text-xs font-bold text-[#4a5568] hover:text-[#2d3436] transition-all">
+                    KONTAK
+                    <span class="absolute bottom-1 left-1/2 -translate-x-1/2 w-1 h-1 bg-[#ff4757] rounded-full opacity-0 group-[.active]:opacity-100 transition-opacity shadow-[0_0_5px_#ff4757]"></span>
+                </a>
+            </div>
+
+            <div class="hidden lg:block ml-4">
+                <a href="ppdb.html" class="group relative inline-flex items-center gap-2 px-6 py-2.5 bg-[#ff4757] text-white font-mono text-xs font-bold uppercase tracking-widest rounded transition-all shadow-[4px_4px_8px_rgba(166,50,60,0.4),-4px_-4px_8px_rgba(255,100,110,0.4)] hover:shadow-[6px_6px_12px_rgba(166,50,60,0.5),-6px_-6px_12px_rgba(255,100,110,0.5)] active:translate-y-[2px] active:shadow-[inset_4px_4px_8px_rgba(0,0,0,0.2)]">
+                    <i data-lucide="log-in" class="w-4 h-4"></i>
+                    PPDB ONLINE
+                </a>
+            </div>
+
+            <div class="flex lg:hidden">
+                <button onclick="toggleMobileMenu()" class="w-12 h-12 rounded-lg bg-[#e0e5ec] shadow-[4px_4px_8px_#babecc,-4px_-4px_8px_#ffffff] flex items-center justify-center text-[#2d3436] active:shadow-[inset_4px_4px_8px_#babecc,inset_-4px_-4px_8px_#ffffff] transition-all">
+                    <i data-lucide="menu" class="w-6 h-6"></i>
+                </button>
             </div>
         </div>
-    </nav>
+    </div>
 
-    <main class="pt-32 pb-24 px-4 md:px-12 max-w-7xl mx-auto space-y-16">
+    <div id="mobileMenu" class="hidden lg:hidden bg-[#e0e5ec] border-t border-white/20 shadow-inner overflow-hidden transition-all duration-300">
+        <div class="px-4 pt-4 pb-6 space-y-2">
+            
+            <a href="index.html" class="mobile-link block px-4 py-3 rounded-lg text-sm font-bold text-[#4a5568] hover:bg-[#d1d9e6] hover:text-[#ff4757] hover:shadow-[inset_2px_2px_5px_#babecc,inset_-2px_-2px_5px_#ffffff] transition-all flex justify-between items-center">
+                BERANDA <i data-lucide="home" class="w-4 h-4 opacity-50"></i>
+            </a>
+            
+            <a href="akademik.html" class="mobile-link block px-4 py-3 rounded-lg text-sm font-bold text-[#4a5568] hover:bg-[#d1d9e6] hover:text-[#ff4757] hover:shadow-[inset_2px_2px_5px_#babecc,inset_-2px_-2px_5px_#ffffff] transition-all flex justify-between items-center">
+                AKADEMIK <i data-lucide="book-open" class="w-4 h-4 opacity-50"></i>
+            </a>
+            
+            <a href="kesiswaan.html" class="mobile-link block px-4 py-3 rounded-lg text-sm font-bold text-[#4a5568] hover:bg-[#d1d9e6] hover:text-[#ff4757] hover:shadow-[inset_2px_2px_5px_#babecc,inset_-2px_-2px_5px_#ffffff] transition-all flex justify-between items-center">
+                KESISWAAN <i data-lucide="users" class="w-4 h-4 opacity-50"></i>
+            </a>
+            
+            <a href="fasilitas.html" class="mobile-link block px-4 py-3 rounded-lg text-sm font-bold text-[#4a5568] hover:bg-[#d1d9e6] hover:text-[#ff4757] hover:shadow-[inset_2px_2px_5px_#babecc,inset_-2px_-2px_5px_#ffffff] transition-all flex justify-between items-center">
+                FASILITAS <i data-lucide="monitor" class="w-4 h-4 opacity-50"></i>
+            </a>
+            
+            <a href="galeri.html" class="mobile-link block px-4 py-3 rounded-lg text-sm font-bold text-[#4a5568] hover:bg-[#d1d9e6] hover:text-[#ff4757] hover:shadow-[inset_2px_2px_5px_#babecc,inset_-2px_-2px_5px_#ffffff] transition-all flex justify-between items-center">
+                GALERI <i data-lucide="image" class="w-4 h-4 opacity-50"></i>
+            </a>
 
-        <section>
-            <div class="mb-12 border-l-4 border-safety-orange pl-6">
-                <h1 class="font-sans font-black text-4xl md:text-5xl text-ink uppercase text-emboss mb-2">
-                    Informasi <span class="text-transparent bg-clip-text bg-gradient-to-r from-ink to-ink-muted">Terkini</span>
+            <a href="blog.html" class="mobile-link block px-4 py-3 rounded-lg text-sm font-bold text-[#4a5568] hover:bg-[#d1d9e6] hover:text-[#ff4757] hover:shadow-[inset_2px_2px_5px_#babecc,inset_-2px_-2px_5px_#ffffff] transition-all flex justify-between items-center">
+                BERITA <i data-lucide="newspaper" class="w-4 h-4 opacity-50"></i>
+            </a>
+            
+            <a href="kontak.html" class="mobile-link block px-4 py-3 rounded-lg text-sm font-bold text-[#4a5568] hover:bg-[#d1d9e6] hover:text-[#ff4757] hover:shadow-[inset_2px_2px_5px_#babecc,inset_-2px_-2px_5px_#ffffff] transition-all flex justify-between items-center">
+                KONTAK <i data-lucide="phone" class="w-4 h-4 opacity-50"></i>
+            </a>
+
+            <div class="pt-4 border-t border-gray-300">
+                <a href="ppdb.html" class="block w-full py-4 bg-[#ff4757] text-white text-center font-mono font-bold uppercase rounded shadow-[4px_4px_8px_#babecc,-4px_-4px_8px_#ffffff] active:translate-y-1 active:shadow-none">
+                    DAFTAR PPDB SEKARANG
+                </a>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<script>
+    // 1. Highlight Active Link
+    document.addEventListener('DOMContentLoaded', () => {
+        const currentPath = window.location.pathname.split('/').pop() || 'index.html';
+        
+        // Desktop Links
+        document.querySelectorAll('.nav-link').forEach(link => {
+            if(link.getAttribute('href') === currentPath) {
+                link.classList.add('active'); // Memicu indikator LED
+                link.classList.remove('text-[#4a5568]');
+                link.classList.add('text-[#2d3436]');
+                // Tambahkan efek shadow recessed/tenggelam untuk item aktif
+                link.classList.add('shadow-[inset_2px_2px_4px_#babecc,inset_-2px_-2px_4px_#ffffff]');
+            }
+        });
+
+        // Mobile Links
+        document.querySelectorAll('.mobile-link').forEach(link => {
+            if(link.getAttribute('href') === currentPath) {
+                link.classList.add('text-[#ff4757]', 'bg-[#d1d9e6]', 'shadow-[inset_2px_2px_5px_#babecc,inset_-2px_-2px_5px_#ffffff]');
+            }
+        });
+    });
+
+    // 2. Toggle Mobile Menu
+    function toggleMobileMenu() {
+        const menu = document.getElementById('mobileMenu');
+        const icon = document.querySelector('.lg\\:hidden button i');
+        
+        if (menu.classList.contains('hidden')) {
+            menu.classList.remove('hidden');
+            // Ganti icon ke X (close) jika perlu, tapi Lucide perlu re-init
+            // Kita biarkan animasi slide saja
+        } else {
+            menu.classList.add('hidden');
+        }
+    }
+
+    // 3. Navbar Scroll Effect (Optional Glass Strengthening)
+    window.addEventListener('scroll', () => {
+        const navbar = document.getElementById('mainNavbar');
+        if (window.scrollY > 10) {
+            navbar.classList.add('shadow-lg');
+            navbar.classList.replace('bg-[#e0e5ec]/90', 'bg-[#e0e5ec]/95');
+        } else {
+            navbar.classList.remove('shadow-lg');
+            navbar.classList.replace('bg-[#e0e5ec]/95', 'bg-[#e0e5ec]/90');
+        }
+    });
+</script>
+
+    <main class="pt-32 pb-24 px-4 md:px-12 max-w-7xl mx-auto space-y-12">
+
+        <section class="flex flex-col lg:flex-row justify-between items-end gap-8 mb-8">
+            <div>
+                <h1 class="font-sans font-black text-4xl md:text-5xl text-ink uppercase text-emboss mb-4">
+                    Dokumentasi <br><span class="text-transparent bg-clip-text bg-gradient-to-r from-ink to-ink-muted">Kegiatan</span>
                 </h1>
-                <p class="font-mono text-sm text-ink-muted">
-                    >> LOADING DATA STREAM... [100%]<br>
-                    >> MENAMPILKAN UPDATE KEGIATAN & PENGUMUMAN SEKOLAH.
+                <p class="font-mono text-sm text-ink-muted max-w-xl border-l-4 border-safety-orange pl-4">
+                    // ACCESSING MEDIA SERVER...<br>
+                    Arsip visual kegiatan akademik, non-akademik, dan fasilitas sekolah.
                 </p>
             </div>
 
-            <a href="blog-detail.html" class="block relative bg-[#2d3035] rounded-3xl p-1 shadow-card group hover:-translate-y-1 transition-transform duration-300">
-                <div class="absolute -top-3 -right-3 z-20">
-                    <div class="bg-safety-orange text-white font-mono font-bold text-xs px-4 py-1 rounded shadow-lg transform rotate-3 border border-white/20">
-                        PRIORITY: HIGH
-                    </div>
-                </div>
-
-                <div class="bg-black rounded-2xl overflow-hidden border-4 border-[#1a1c20] relative aspect-[21/9] md:aspect-[21/8]">
-                    <img src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?q=80&w=1200&auto=format&fit=crop" 
-                         alt="Penerimaan Peserta Didik Baru (PPDB) SMA Masa Depan"
-                         width="1200" height="600"
-                         class="w-full h-full object-cover opacity-60 group-hover:opacity-100 transition-opacity duration-700 grayscale group-hover:grayscale-0">
-                    <div class="absolute inset-0 bg-scanlines opacity-20 pointer-events-none"></div>
-                    
-                    <div class="absolute bottom-0 left-0 w-full bg-gradient-to-t from-black via-black/80 to-transparent p-6 md:p-10">
-                        <div class="flex gap-3 mb-3">
-                            <span class="bg-safety-green/20 text-safety-green border border-safety-green/30 px-2 py-0.5 rounded text-[10px] font-mono font-bold">AKADEMIK</span>
-                            <span class="text-gray-400 font-mono text-[10px] flex items-center gap-1">
-                                <i data-lucide="clock" class="w-3 h-3"></i> 12 JAN 2026
-                            </span>
-                        </div>
-                        <h2 class="font-sans font-black text-2xl md:text-4xl text-white mb-4 leading-tight">
-                            Penerimaan Peserta Didik Baru (PPDB) Tahun Ajaran 2026/2027 Resmi Dibuka
-                        </h2>
-                        <p class="font-sans text-gray-300 text-sm md:text-base max-w-3xl mb-6 line-clamp-2">
-                            Simak panduan lengkap, persyaratan administrasi, dan jadwal seleksi masuk. Pastikan seluruh dokumen telah terdigitalisasi sebelum mengakses portal pendaftaran.
-                        </p>
-                        <span class="inline-flex items-center gap-2 bg-safety-orange text-white px-6 py-3 rounded font-mono text-xs font-bold uppercase tracking-widest hover:bg-orange-600 transition-colors shadow-lg">
-                            BACA SELENGKAPNYA <i data-lucide="arrow-right" class="w-4 h-4"></i>
-                        </span>
-                    </div>
-                </div>
-            </a>
-        </section>
-
-        <section class="grid grid-cols-1 lg:grid-cols-12 gap-12">
-            
-            <aside class="lg:col-span-4 space-y-8 h-fit lg:sticky lg:top-32">
-                
-                <div class="bg-chassis rounded-xl p-6 shadow-card border border-white/40">
-                    <h3 class="font-mono text-xs font-bold text-ink-muted uppercase mb-4 flex items-center gap-2">
-                        <i data-lucide="search" class="w-4 h-4"></i> Search Query
-                    </h3>
-                    <div class="relative">
-                        <input type="text" id="searchInput" placeholder="Ketik kata kunci..." 
-                               class="w-full bg-recessed rounded p-3 pl-10 font-mono text-sm text-ink shadow-recessed border-none focus:ring-2 focus:ring-safety-orange outline-none placeholder:text-ink-muted/50 transition-all">
-                        <div class="absolute left-3 top-1/2 -translate-y-1/2 text-safety-orange font-bold font-mono">>_</div>
-                    </div>
-                </div>
-
-                <div class="bg-chassis rounded-xl p-6 shadow-card border border-white/40">
-                    <h3 class="font-mono text-xs font-bold text-ink-muted uppercase mb-4 flex items-center gap-2">
-                        <i data-lucide="folder-open" class="w-4 h-4"></i> Directories
-                    </h3>
-                    <div class="space-y-3" id="categoryList">
-                        </div>
-                </div>
-
-                <div class="bg-chassis rounded-xl p-6 shadow-card border border-white/40">
-                    <h3 class="font-mono text-xs font-bold text-ink-muted uppercase mb-4 flex items-center gap-2">
-                        <i data-lucide="tag" class="w-4 h-4"></i> Keywords
-                    </h3>
-                    <div class="flex flex-wrap gap-2" id="tagList">
-                        </div>
-                </div>
-            </aside>
-
-            <div class="lg:col-span-8">
-                
-                <div id="postsContainer" class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12 min-h-[500px]">
-                    </div>
-
-                <div class="flex justify-center items-center gap-4" id="paginationControls">
-                    <button onclick="changePage(-1)" class="btn-physical w-10 h-10 rounded-full bg-chassis shadow-card flex items-center justify-center text-ink hover:text-safety-orange">
-                        <i data-lucide="chevron-left" class="w-5 h-5"></i>
-                    </button>
-                    
-                    <div class="flex gap-2 bg-recessed p-1 rounded-full shadow-recessed" id="pageNumbers">
-                        </div>
-
-                    <button onclick="changePage(1)" class="btn-physical w-10 h-10 rounded-full bg-chassis shadow-card flex items-center justify-center text-ink hover:text-safety-orange">
-                        <i data-lucide="chevron-right" class="w-5 h-5"></i>
-                    </button>
-                </div>
-
+            <div class="bg-chassis p-2 rounded-xl shadow-card border border-white/40 flex flex-wrap gap-2" id="filterContainer">
+                <button onclick="setFilter('all')" class="filter-btn active px-6 py-2 rounded-lg font-mono text-xs font-bold uppercase transition-all bg-ink text-white shadow-pressed" id="btn-all">
+                    SEMUA
+                </button>
+                <button onclick="setFilter('akademik')" class="filter-btn px-6 py-2 rounded-lg font-mono text-xs font-bold uppercase transition-all bg-chassis text-ink-muted hover:text-safety-orange hover:shadow-floating" id="btn-akademik">
+                    AKADEMIK
+                </button>
+                <button onclick="setFilter('kegiatan')" class="filter-btn px-6 py-2 rounded-lg font-mono text-xs font-bold uppercase transition-all bg-chassis text-ink-muted hover:text-safety-orange hover:shadow-floating" id="btn-kegiatan">
+                    KEGIATAN
+                </button>
+                <button onclick="setFilter('fasilitas')" class="filter-btn px-6 py-2 rounded-lg font-mono text-xs font-bold uppercase transition-all bg-chassis text-ink-muted hover:text-safety-orange hover:shadow-floating" id="btn-fasilitas">
+                    FASILITAS
+                </button>
             </div>
-
         </section>
+
+        <section id="galleryGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 min-h-[500px]">
+            </section>
+
+        <div class="flex justify-center mt-12">
+            <div class="flex gap-4 items-center bg-chassis p-2 rounded-xl shadow-recessed" id="paginationControls">
+                </div>
+        </div>
 
     </main>
 
+    <div id="lightbox" class="fixed inset-0 z-50 bg-black/90 backdrop-blur-md hidden flex items-center justify-center p-4">
+        <div class="relative w-full max-w-5xl bg-black border-2 border-[#333] rounded-xl shadow-monitor overflow-hidden flex flex-col">
+            <div class="h-12 border-b border-[#333] bg-[#0d0f12] flex items-center justify-between px-4">
+                <div class="flex items-center gap-2">
+                    <span class="w-2 h-2 rounded-full bg-safety-green animate-pulse"></span>
+                    <span class="font-mono text-xs text-safety-green">VIEWING_MODE: FULL_RES</span>
+                </div>
+                <button onclick="closeLightbox()" class="text-white hover:text-safety-orange transition-colors">
+                    <i data-lucide="x" class="w-6 h-6"></i>
+                </button>
+            </div>
+            <div class="relative flex-1 bg-black flex items-center justify-center p-8 min-h-[50vh]">
+                <img id="lightboxImg" src="" class="max-w-full max-h-[70vh] object-contain shadow-2xl border border-white/10" alt="Detail Gambar Galeri">
+                <div class="absolute inset-0 bg-scanlines opacity-10 pointer-events-none"></div>
+                <div class="absolute top-4 left-4 w-4 h-4 border-t-2 border-l-2 border-white/20"></div>
+                <div class="absolute top-4 right-4 w-4 h-4 border-t-2 border-r-2 border-white/20"></div>
+                <div class="absolute bottom-4 left-4 w-4 h-4 border-b-2 border-l-2 border-white/20"></div>
+                <div class="absolute bottom-4 right-4 w-4 h-4 border-b-2 border-r-2 border-white/20"></div>
+            </div>
+            <div class="h-16 border-t border-[#333] bg-[#0d0f12] px-6 py-3 flex justify-between items-center">
+                <div>
+                    <h3 id="lightboxTitle" class="font-sans font-bold text-white text-lg">Image Title</h3>
+                    <p class="font-mono text-[10px] text-gray-500">METADATA: ISO 400 | f/2.8</p>
+                </div>
+                <button class="px-4 py-2 bg-[#222] border border-[#444] rounded text-white font-mono text-xs hover:bg-[#333]">
+                    DOWNLOAD_FILE
+                </button>
+            </div>
+        </div>
+    </div>
+
     <script>
-        // --- 1. DATA DATABASE (With ALT Text for SEO) ---
-        const blogPosts = [
-            {
-                id: 1,
-                title: "Tim Robotik Raih Juara 2 Tingkat Provinsi Jawa Timur",
-                category: "Prestasi",
-                date: "10 JAN 2026",
-                image: "https://images.unsplash.com/photo-1577896334614-201b31d50dd5?q=80&w=400&auto=format&fit=crop",
-                alt: "Tim Robotik SMA Masa Depan sedang merakit robot",
-                excerpt: "Kompetisi yang berlangsung di Surabaya ini diikuti oleh lebih dari 50 sekolah. Tim SMA Tekno menampilkan robot pemadam api otomatis yang berhasil menyelesaikan misi.",
-                tags: ["Olimpiade", "Robotik", "Juara"]
-            },
-            {
-                id: 2,
-                title: "Workshop Digital Marketing bersama Alumni",
-                category: "Kesiswaan",
-                date: "08 JAN 2026",
-                image: "https://images.unsplash.com/photo-1524178232363-1fb2b075b655?q=80&w=400&auto=format&fit=crop",
-                alt: "Suasana workshop digital marketing di kelas",
-                excerpt: "Membekali siswa kelas XII dengan keterampilan pemasaran digital untuk menghadapi dunia kerja di era industri 4.0 bersama Kak Budi (Alumni 2018).",
-                tags: ["Alumni", "Workshop", "Skill"]
-            },
-            {
-                id: 3,
-                title: "Jadwal Pengambilan Raport Semester Ganjil",
-                category: "Akademik",
-                date: "05 JAN 2026",
-                image: "https://images.unsplash.com/photo-1544717297-fa95b6ee9643?q=80&w=400&auto=format&fit=crop",
-                alt: "Dokumen raport siswa di atas meja",
-                excerpt: "Diberitahukan kepada seluruh wali murid bahwa pengambilan hasil belajar akan dilaksanakan secara bertahap sesuai jadwal yang terlampir.",
-                tags: ["Raport", "Pengumuman"]
-            },
-            {
-                id: 4,
-                title: "Kalender Akademik Semester Genap 2025/2026",
-                category: "Akademik",
-                date: "02 JAN 2026",
-                image: "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?q=80&w=400&auto=format&fit=crop",
-                alt: "Siswa sedang melihat jadwal akademik di papan pengumuman",
-                excerpt: "Unduh jadwal lengkap kegiatan belajar mengajar, libur nasional, dan agenda ujian sekolah semester ini agar persiapan lebih matang.",
-                tags: ["Kalender", "Jadwal"]
-            },
-            {
-                id: 5,
-                title: "Pelepasan Kontingen Pramuka ke Jambore Nasional",
-                category: "Kesiswaan",
-                date: "28 DEC 2025",
-                image: "https://images.unsplash.com/photo-1478131143081-80f7f84ca84d?q=80&w=400&auto=format&fit=crop",
-                alt: "Anggota pramuka sedang berkemah di hutan",
-                excerpt: "Sebanyak 10 siswa terpilih mewakili sekolah dalam ajang Jambore Nasional di Cibubur. Mohon doa restu dari seluruh warga sekolah.",
-                tags: ["Pramuka", "Ekstrakurikuler"]
-            },
-            {
-                id: 6,
-                title: "Update Sistem E-Learning Versi 2.0",
-                category: "Teknologi",
-                date: "20 DEC 2025",
-                image: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=400&auto=format&fit=crop",
-                alt: "Antarmuka sistem e-learning di layar laptop",
-                excerpt: "Sistem manajemen pembelajaran kini lebih cepat dan responsif. Fitur baru termasuk absensi wajah dan pengumpulan tugas real-time.",
-                tags: ["IT", "Update", "Fasilitas"]
-            }
+        // --- 1. DATA DATABASE (12 Items for Demo) ---
+        const galleryData = [
+            { id: 1, category: 'kegiatan', title: 'Pensi Sekolah 2025', size: '4.2MB', img: 'https://images.unsplash.com/photo-1511632765486-a01980e01a18?q=80&w=600&auto=format&fit=crop' },
+            { id: 2, category: 'akademik', title: 'Ujian Praktikum Kimia', size: '12MB', img: 'https://images.unsplash.com/photo-1544717305-2782549b5136?q=80&w=600&auto=format&fit=crop' },
+            { id: 3, category: 'fasilitas', title: 'Perpustakaan Digital', size: '1.8MB', img: 'https://images.unsplash.com/photo-1562774053-701939374585?q=80&w=600&auto=format&fit=crop' },
+            { id: 4, category: 'kegiatan', title: 'Kemah Bakti Pramuka', size: '5.5MB', img: 'https://images.unsplash.com/photo-1526976668912-1a811878dd37?q=80&w=600&auto=format&fit=crop' },
+            { id: 5, category: 'akademik', title: 'Kunjungan Industri', size: '3.1MB', img: 'https://images.unsplash.com/photo-1531403009284-440f080d1e12?q=80&w=600&auto=format&fit=crop' },
+            { id: 6, category: 'fasilitas', title: 'Lab Komputer Baru', size: '2.4MB', img: 'https://images.unsplash.com/photo-1598981493990-33a97bc94219?q=80&w=600&auto=format&fit=crop' },
+            { id: 7, category: 'kegiatan', title: 'Pertandingan Basket Final', size: '6.0MB', img: 'https://images.unsplash.com/photo-1546519638-68e109498ffc?q=80&w=600&auto=format&fit=crop' },
+            { id: 8, category: 'akademik', title: 'Wisuda Angkatan 25', size: '8.2MB', img: 'https://images.unsplash.com/photo-1523050854058-8df90110c9f1?q=80&w=600&auto=format&fit=crop' },
+            { id: 9, category: 'fasilitas', title: 'Masjid Sekolah', size: '3.3MB', img: 'https://images.unsplash.com/photo-1605656816944-971cd5c1407f?q=80&w=600&auto=format&fit=crop' },
+            { id: 10, category: 'kegiatan', title: 'Lomba Paduan Suara', size: '4.5MB', img: 'https://images.unsplash.com/photo-1516280440614-6697288d5d38?q=80&w=600&auto=format&fit=crop' },
+            { id: 11, category: 'akademik', title: 'Workshop Robotik', size: '2.9MB', img: 'https://images.unsplash.com/photo-1581092921461-eab62e97a782?q=80&w=600&auto=format&fit=crop' },
+            { id: 12, category: 'fasilitas', title: 'Kantin Sehat', size: '1.5MB', img: 'https://images.unsplash.com/photo-1604579450682-438c8588a681?q=80&w=600&auto=format&fit=crop' },
         ];
 
-        // --- 2. STATE MANAGEMENT ---
+        // --- 2. STATE ---
         let state = {
-            posts: blogPosts,
-            query: "",
-            category: "Semua",
             page: 1,
-            perPage: 4
+            perPage: 6,
+            filter: 'all'
         };
 
-        const categories = ["Semua", "Akademik", "Kesiswaan", "Prestasi", "Teknologi"];
-        const allTags = [...new Set(blogPosts.flatMap(post => post.tags))];
+        // --- 3. RENDER FUNCTIONS ---
+        const galleryGrid = document.getElementById('galleryGrid');
+        const paginationControls = document.getElementById('paginationControls');
 
-        // --- 3. DOM ELEMENTS ---
-        const postsContainer = document.getElementById('postsContainer');
-        const categoryList = document.getElementById('categoryList');
-        const tagList = document.getElementById('tagList');
-        const searchInput = document.getElementById('searchInput');
-        const pageNumbers = document.getElementById('pageNumbers');
+        function renderGallery() {
+            // Filter Data
+            const filteredData = state.filter === 'all' 
+                ? galleryData 
+                : galleryData.filter(item => item.category === state.filter);
 
-        // --- 4. RENDER FUNCTIONS ---
-
-        function renderPosts() {
-            let filtered = blogPosts.filter(post => {
-                const matchesQuery = post.title.toLowerCase().includes(state.query.toLowerCase()) || 
-                                     post.excerpt.toLowerCase().includes(state.query.toLowerCase());
-                const matchesCategory = state.category === "Semua" || post.category === state.category;
-                return matchesQuery && matchesCategory;
-            });
-
-            const totalPages = Math.ceil(filtered.length / state.perPage);
+            // Pagination Logic
+            const totalPages = Math.ceil(filteredData.length / state.perPage);
             const start = (state.page - 1) * state.perPage;
             const end = start + state.perPage;
-            const paginated = filtered.slice(start, end);
+            const paginatedData = filteredData.slice(start, end);
 
-            postsContainer.innerHTML = "";
-
-            if (paginated.length === 0) {
-                postsContainer.innerHTML = `
-                    <div class="col-span-1 md:col-span-2 flex flex-col items-center justify-center p-12 bg-chassis border-2 border-dashed border-ink/20 rounded-xl text-center">
-                        <i data-lucide="file-x-2" class="w-16 h-16 text-ink-muted mb-4 opacity-50"></i>
-                        <h3 class="font-mono text-lg font-bold text-ink">DATA_NOT_FOUND</h3>
-                        <p class="text-sm text-ink-muted">Query pencarian tidak cocok dengan arsip manapun.</p>
-                        <button onclick="resetFilters()" class="mt-4 px-4 py-2 bg-ink text-white rounded font-mono text-xs hover:bg-safety-orange transition-colors">RESET FILTER</button>
-                    </div>
-                `;
-                lucide.createIcons();
-                renderPagination(0);
-                return;
+            // Render Items
+            galleryGrid.innerHTML = "";
+            
+            if(paginatedData.length === 0) {
+                galleryGrid.innerHTML = `<div class="col-span-3 text-center py-12 text-ink-muted font-mono">NO_DATA_FOUND_IN_ARCHIVE</div>`;
             }
 
-            paginated.forEach(post => {
-                // Modified: Now wrapped in an Anchor tag pointing to blog-detail.html
+            paginatedData.forEach(item => {
+                // PageSpeed: loading="lazy" & width/height attributes
                 const html = `
-                    <a href="blog-detail.html" class="block bg-chassis p-1 rounded-2xl shadow-card group hover:-translate-y-1 transition-transform duration-300">
-                        <div class="bg-panel h-full rounded-xl p-5 border border-white/50 flex flex-col relative overflow-hidden">
-                            <div class="relative h-48 bg-recessed rounded-lg mb-4 overflow-hidden border border-black/10 shadow-inner">
-                                <img src="${post.image}" alt="${post.alt}" loading="lazy" width="400" height="200" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500">
-                                <div class="absolute top-2 right-2 bg-black/60 backdrop-blur-sm text-white px-2 py-0.5 rounded text-[10px] font-mono uppercase">
-                                    ${post.category}
-                                </div>
-                            </div>
-                            
-                            <div class="mb-2 flex items-center gap-2 text-[10px] font-mono text-ink-muted">
-                                <span>LOG: #2026-00${post.id}</span>
-                                <span>•</span>
-                                <span>${post.date}</span>
-                            </div>
-                            
-                            <h3 class="font-sans font-bold text-lg text-ink mb-3 group-hover:text-safety-orange transition-colors">
-                                ${post.title}
-                            </h3>
-                            
-                            <p class="font-sans text-sm text-ink-muted mb-6 line-clamp-3">
-                                ${post.excerpt}
-                            </p>
-                            
-                            <div class="mt-auto inline-flex items-center gap-2 text-xs font-bold font-mono text-ink uppercase group-hover:gap-3 transition-all">
-                                Read Log <i data-lucide="chevron-right" class="w-3 h-3 text-safety-orange"></i>
-                            </div>
+                <div class="gallery-item group relative bg-chassis p-1 rounded-2xl shadow-card cursor-pointer hover:-translate-y-2 fade-in" 
+                     onclick="openLightbox(this)">
+                    <div class="bg-black h-64 rounded-xl overflow-hidden border-2 border-[#333] relative">
+                        <img src="${item.img}" 
+                             alt="${item.title}" 
+                             width="600" height="400" 
+                             loading="lazy" 
+                             class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 opacity-80 group-hover:opacity-100">
+                        <div class="absolute inset-0 bg-scanlines opacity-20 pointer-events-none"></div>
+                        <div class="absolute bottom-0 left-0 w-full p-4 bg-gradient-to-t from-black to-transparent opacity-0 group-hover:opacity-100 transition-opacity">
+                            <h3 class="font-bold text-white text-sm font-sans">${item.title}</h3>
+                            <p class="font-mono text-[10px] text-safety-green">FILE_${item.id}.RAW | ${item.size}</p>
                         </div>
-                    </a>
-                `;
-                postsContainer.innerHTML += html;
+                         <div class="absolute top-2 left-2 w-2 h-2 border-t-2 border-l-2 border-white/30"></div>
+                        <div class="absolute top-2 right-2 w-2 h-2 border-t-2 border-r-2 border-white/30"></div>
+                        <div class="absolute bottom-2 left-2 w-2 h-2 border-b-2 border-l-2 border-white/30"></div>
+                        <div class="absolute bottom-2 right-2 w-2 h-2 border-b-2 border-r-2 border-white/30"></div>
+                    </div>
+                    <div class="mt-3 flex justify-between items-center px-2">
+                        <span class="font-mono text-[10px] font-bold text-ink-muted uppercase">FOLDER: ${item.category}</span>
+                        <i data-lucide="maximize-2" class="w-4 h-4 text-ink-muted group-hover:text-safety-orange transition-colors"></i>
+                    </div>
+                </div>`;
+                galleryGrid.innerHTML += html;
             });
 
-            lucide.createIcons();
             renderPagination(totalPages);
-        }
-
-        function renderCategories() {
-            categoryList.innerHTML = categories.map(cat => {
-                const isActive = state.category === cat;
-                const activeClass = isActive ? "toggle-active bg-white border-white" : "toggle-inactive bg-recessed hover:bg-gray-300 border-transparent";
-                const indicatorClass = isActive ? "bg-safety-orange shadow-[0_0_8px_#ff4757]" : "bg-recessed shadow-inner";
-                
-                const count = cat === "Semua" ? blogPosts.length : blogPosts.filter(p => p.category === cat).length;
-
-                return `
-                <button onclick="setCategory('${cat}')" class="w-full flex justify-between items-center group cursor-pointer p-2 rounded transition-all ${isActive ? 'bg-white/40 shadow-sm' : ''}">
-                    <div class="flex items-center gap-3">
-                        <div class="w-10 h-6 rounded-full relative shadow-inner transition-colors ${isActive ? 'bg-ink' : 'bg-recessed'}">
-                            <div class="absolute top-1 w-4 h-4 rounded-full shadow-md transition-all ${isActive ? 'right-1 bg-safety-orange' : 'left-1 bg-white/50'}"></div>
-                        </div>
-                        <span class="font-sans text-sm transition-colors ${isActive ? 'text-ink font-bold' : 'text-ink-muted font-medium'}">${cat}</span>
-                    </div>
-                    <span class="font-mono text-[10px] text-ink-muted px-2 py-0.5 bg-black/5 rounded">${count}</span>
-                </button>
-                `;
-            }).join('');
-        }
-
-        function renderTags() {
-            tagList.innerHTML = allTags.map(tag => `
-                <button onclick="setSearch('${tag}')" class="px-3 py-1 bg-panel border border-white shadow-sm rounded text-[10px] font-mono font-bold text-ink-muted hover:text-safety-orange hover:shadow-md transition-all active:scale-95">
-                    #${tag}
-                </button>
-            `).join('');
+            lucide.createIcons();
         }
 
         function renderPagination(totalPages) {
             if (totalPages <= 1) {
-                pageNumbers.innerHTML = `<button class="w-8 h-8 rounded-full bg-safety-orange text-white font-mono font-bold text-xs shadow-md">1</button>`;
+                paginationControls.innerHTML = '';
+                paginationControls.parentElement.style.display = 'none'; // Hide if only 1 page
                 return;
             }
+            paginationControls.parentElement.style.display = 'flex';
 
-            let html = '';
-            for(let i=1; i<=totalPages; i++) {
-                const isActive = i === state.page;
-                const classes = isActive 
-                    ? "bg-safety-orange text-white shadow-md" 
-                    : "hover:bg-white/50 text-ink-muted";
-                
-                html += `<button onclick="goToPage(${i})" class="w-8 h-8 rounded-full font-mono font-bold text-xs transition-colors ${classes}">${i}</button>`;
+            let html = `
+                <button onclick="changePage(-1)" ${state.page === 1 ? 'disabled' : ''} class="w-10 h-10 rounded bg-chassis shadow-card flex items-center justify-center text-ink hover:text-safety-orange transition-all disabled:opacity-50 disabled:cursor-not-allowed">
+                    <i data-lucide="chevron-left" class="w-5 h-5"></i>
+                </button>
+                <span class="font-mono text-xs text-ink-muted font-bold mx-4">PAGE ${state.page} / ${totalPages}</span>
+                <button onclick="changePage(1)" ${state.page === totalPages ? 'disabled' : ''} class="w-10 h-10 rounded bg-chassis shadow-card flex items-center justify-center text-ink hover:text-safety-orange transition-all disabled:opacity-50 disabled:cursor-not-allowed">
+                    <i data-lucide="chevron-right" class="w-5 h-5"></i>
+                </button>
+            `;
+            paginationControls.innerHTML = html;
+            lucide.createIcons();
+        }
+
+        // --- 4. CONTROLLERS ---
+        function setFilter(cat) {
+            state.filter = cat;
+            state.page = 1; // Reset to page 1 on filter change
+            
+            // Update Buttons Visuals
+            document.querySelectorAll('.filter-btn').forEach(btn => {
+                btn.classList.remove('bg-ink', 'text-white', 'shadow-pressed');
+                btn.classList.add('bg-chassis', 'text-ink-muted');
+            });
+            const activeBtn = document.getElementById(`btn-${cat}`);
+            if(activeBtn) {
+                activeBtn.classList.remove('bg-chassis', 'text-ink-muted');
+                activeBtn.classList.add('bg-ink', 'text-white', 'shadow-pressed');
             }
-            pageNumbers.innerHTML = html;
-        }
 
-        // --- 5. EVENT HANDLERS ---
-
-        function handleSearch(e) {
-            state.query = e.target.value;
-            state.page = 1;
-            renderPosts();
-        }
-
-        function setCategory(cat) {
-            state.category = cat;
-            state.page = 1;
-            renderCategories();
-            renderPosts();
-        }
-
-        function setSearch(tag) {
-            searchInput.value = tag;
-            state.query = tag;
-            state.page = 1;
-            renderPosts();
+            renderGallery();
         }
 
         function changePage(direction) {
-            let filtered = blogPosts.filter(post => {
-                const matchesQuery = post.title.toLowerCase().includes(state.query.toLowerCase()) || 
-                                     post.excerpt.toLowerCase().includes(state.query.toLowerCase());
-                const matchesCategory = state.category === "Semua" || post.category === state.category;
-                return matchesQuery && matchesCategory;
-            });
-            const maxPage = Math.ceil(filtered.length / state.perPage);
-
+            const filteredData = state.filter === 'all' 
+                ? galleryData 
+                : galleryData.filter(item => item.category === state.filter);
+            const totalPages = Math.ceil(filteredData.length / state.perPage);
+            
             const newPage = state.page + direction;
-            if (newPage > 0 && newPage <= maxPage) {
+            if(newPage > 0 && newPage <= totalPages) {
                 state.page = newPage;
-                renderPosts();
-                postsContainer.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                renderGallery();
+                // Scroll to top of grid
+                document.getElementById('galleryGrid').scrollIntoView({ behavior: 'smooth', block: 'start' });
             }
         }
 
-        function goToPage(num) {
-            state.page = num;
-            renderPosts();
+        // --- 5. LIGHTBOX LOGIC ---
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImg = document.getElementById('lightboxImg');
+        const lightboxTitle = document.getElementById('lightboxTitle');
+
+        function openLightbox(element) {
+            const imgParams = element.querySelector('img');
+            const titleParams = element.querySelector('h3').innerText;
+            
+            lightboxImg.src = imgParams.src;
+            lightboxImg.alt = imgParams.alt; // A11y
+            lightboxTitle.innerText = titleParams;
+            lightbox.classList.remove('hidden');
         }
 
-        function resetFilters() {
-            state.query = "";
-            state.category = "Semua";
-            searchInput.value = "";
-            renderCategories();
-            renderPosts();
+        function closeLightbox() {
+            lightbox.classList.add('hidden');
         }
-
-        // --- 6. INITIALIZATION ---
-        searchInput.addEventListener('input', handleSearch);
         
-        renderCategories();
-        renderTags();
-        renderPosts();
-        lucide.createIcons();
+        // Escape key close
+        document.addEventListener('keydown', (e) => {
+            if (e.key === "Escape") closeLightbox();
+        });
+
+        // Initialize
+        renderGallery();
 
     </script>
 </body>
